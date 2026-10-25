@@ -1,0 +1,35 @@
+/* One continuous SVG character rig. The carried tissue belongs to his wrist. */
+.ad-paradigm>.ad-scene{display:block;padding:0;min-height:0;overflow:hidden;background:#c2c7b7;color:#344e48}
+.pa-autumn{position:relative;isolation:isolate;width:100%;height:clamp(680px,83svh,900px);overflow:hidden;background:#c2c7b7}
+.pa-autumn>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pa-city{display:block;width:100%;height:100%;position:absolute;inset:0}
+.pa-word{transform-box:fill-box;transform-origin:0 50%;will-change:transform,opacity}
+.pa-word-held{animation:pa-leaf-sway 4.5s ease-in-out var(--word-delay) infinite alternate}
+.pa-word-falling{animation:pa-word-fall var(--word-time) ease-in-out var(--word-delay) infinite}
+.pa-wind{animation:pa-wind-pass 8s ease-in-out infinite}
+.pa-walker{position:absolute;left:50%;bottom:3%;width:285px;height:428px;margin-left:-143px;z-index:2;pointer-events:none;will-change:transform}
+.pa-character{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(1px 3px 1px #57625222)}
+.pa-trouser,.pa-sleeve{stroke-linejoin:round}
+.pa-scarf-tail{transform-origin:146px 128px;animation:pa-scarf 2.6s ease-in-out infinite alternate}
+.pa-tissue{pointer-events:all;cursor:pointer;outline:none}
+.pa-paper-words{pointer-events:none}
+.pa-tissue-copy{box-sizing:border-box;display:grid;place-content:center;width:264px;height:154px;padding:2px 3px;margin:0;text-align:center;color:#494d49;font:italic 23px/1.4 Georgia,'Times New Roman',serif;letter-spacing:-.02em;text-wrap:balance}
+.pa-tissue:hover .pa-paper-shape{stroke:#967657;stroke-width:1.5}
+.pa-tissue:focus-visible{outline:none}
+.pa-tissue:focus-visible .pa-paper-shape{stroke:#834f33;stroke-width:3}
+.pa-paused *{animation-play-state:paused!important}
+.pa-reduced :is(.pa-word,.pa-wind,.pa-scarf-tail){animation:none}
+.pa-reduced .pa-word{transform:rotate(var(--word-turn))}
+@keyframes pa-leaf-sway{from{transform:rotate(calc(var(--word-turn) - 7deg))}to{transform:rotate(calc(var(--word-turn) + 12deg))}}
+@keyframes pa-word-fall{0%,29%{opacity:1;transform:translate(0,0) rotate(var(--word-turn))}35%{transform:translate(-30px,8px) rotate(24deg)}50%{opacity:1;transform:translate(-130px,45px) rotate(-18deg)}67%{opacity:.8;transform:translate(-280px,120px) rotate(44deg)}80%,97%{opacity:0;transform:translate(-440px,235px) rotate(83deg)}98%{opacity:0;transform:translate(0,0) rotate(var(--word-turn))}100%{opacity:1;transform:translate(0,0) rotate(var(--word-turn))}}
+@keyframes pa-wind-pass{0%,100%{opacity:.15;transform:translateX(35px)}45%{opacity:.65;transform:translateX(-85px)}80%{opacity:0;transform:translateX(-180px)}}
+@keyframes pa-scarf{from{transform:rotate(-1deg)}to{transform:rotate(2deg)}}
+@media(max-width:600px){
+ .pa-city .pa-first-tree{transform:translateX(250px)}
+ .pa-autumn{height:690px}
+ .pa-walker{width:242px;height:363px;margin-left:-122px;bottom:4%}
+ .ad-skip{right:12px;bottom:40px}
+}
+@media(prefers-reduced-motion:reduce){.pa-autumn *{animation:none!important}}
+
+.pa-doctor-signature{fill:#494d49;font:italic 11px Georgia,"Times New Roman",serif;pointer-events:none}

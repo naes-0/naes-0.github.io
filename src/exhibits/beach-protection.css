@@ -1,0 +1,100 @@
+/* Coastal interface illustration; all controls are objects within the scene. */
+[data-gallery=ads] .portfolio-ad.ad-speech{scroll-margin-top:calc(-1 * (var(--header-height,90px) + 16px))}
+.ad-speech .ad-scene{height:100svh;height:100dvh;display:block;padding:0;min-height:0;background:#c9eafb;border:0;border-radius:0;box-shadow:none;isolation:isolate;color:#365d64;overflow:hidden}
+.ad-speech .ad-close{color:#254a4d;top:20px;right:max(var(--gutter),22px)}
+.bvp-beach{position:relative;width:100%;height:100%;overflow:hidden;--bp-sky-high:#c9eafb;--bp-sky-low:#eef4df;--bp-skin-light:#f5bd96;--bp-skin-mid:#f5bd96;--bp-skin-shadow:#e6a280}
+.bvp-heading{position:absolute;left:9%;top:max(72px,7%);z-index:1;text-align:left;pointer-events:none;transform:rotate(-2deg);font-family:"Comic Sans MS","Comic Sans","Segoe Print",cursive}
+.ad-speech .bvp-heading h3{font-family:inherit;font-size:clamp(31px,4.7vw,62px);font-weight:700;line-height:1.08;letter-spacing:-.035em;max-width:800px;margin:0 0 12px;color:#f4ba70;-webkit-text-stroke:1.5px #794b45;paint-order:stroke fill;text-shadow:2px 3px 0 #fff6df}
+.ad-speech .bvp-heading p{font-family:inherit;font-size:clamp(16px,1.85vw,24px);font-weight:700;font-style:italic;letter-spacing:-.025em;line-height:1.25;margin:0;color:#795246;text-shadow:1px 1px 0 #fff6df}
+.bvp-stage{position:absolute;inset:0;width:100%;height:100%;margin:0}
+.bvp-world{display:block;width:100%;height:100%;overflow:hidden}
+.bvp-sky-high{stop-color:var(--bp-sky-high);transition:stop-color 1.6s}
+.bvp-sky-low{stop-color:var(--bp-sky-low);transition:stop-color 1.6s}
+.bvp-skin{fill:var(--bp-skin-mid);transition:fill .7s}
+.bvp-skin-far{fill:var(--bp-skin-shadow)}
+.bvp-skin-shade{fill:var(--bp-skin-shadow);transition:fill .7s}
+.bvp-skin-light{stop-color:var(--bp-skin-light);transition:stop-color .7s}
+.bvp-skin-mid{stop-color:var(--bp-skin-mid);transition:stop-color .7s}
+.bvp-skin-shadow{stop-color:var(--bp-skin-shadow);transition:stop-color .7s}
+.bvp-object{cursor:pointer;outline:none}
+.bvp-object-art{transform-box:fill-box;transform-origin:center;transition:transform .25s,opacity .5s,filter .25s}
+.bvp-object:hover .bvp-object-art{transform:translateY(-7px);filter:drop-shadow(0 8px 5px #5e59312e)}
+.bvp-focus{opacity:0;stroke-dasharray:4 5}
+.bvp-object:focus-visible .bvp-focus{opacity:1}
+.bvp-object[aria-pressed=true] .bvp-focus{stroke:#476458;stroke-dasharray:none}
+.bvp-object[aria-pressed=true] .bvp-hit{cursor:default}
+.bvp-object[aria-pressed=true]:hover .bvp-object-art{transform:none;filter:none}
+.bvp-object-umbrella .bvp-hit{r:105}
+.bvp-object-umbrella .bvp-focus{r:104}
+.bvp-cream-marks{opacity:0;transition:opacity .6s}
+.has-cream{--bp-skin-light:#fff9ef;--bp-skin-mid:#fff9ef;--bp-skin-shadow:#e7d9cd}
+.has-cream .bvp-cream-marks{opacity:1}
+.has-cream .bvp-object-cream .bvp-object-art,.has-cap .bvp-object-cap .bvp-object-art,.has-umbrella .bvp-object-umbrella .bvp-object-art{opacity:0;transform:translateY(-20px) scale(.85)}
+.has-cream .bvp-object-cream .bvp-object-shadow,.has-cap .bvp-object-cap .bvp-object-shadow,.has-umbrella .bvp-object-umbrella .bvp-object-shadow{opacity:0}
+.bvp-worn-cap{opacity:0;transition:opacity .45s}
+.has-cap .bvp-worn-cap{opacity:1}
+.bvp-worn-glasses,.bvp-worn-shirt{opacity:0;transition:opacity .45s}
+.has-glasses .bvp-worn-glasses,.has-shirt .bvp-worn-shirt{opacity:1}
+.has-glasses .bvp-bare-eyes,.has-shirt .bvp-body-details,.has-shirt .bvp-cream-torso{opacity:0}
+.has-glasses .bvp-object-glasses .bvp-object-art,.has-shirt .bvp-object-shirt .bvp-object-art,.has-glasses .bvp-object-glasses .bvp-object-shadow,.has-shirt .bvp-object-shirt .bvp-object-shadow{opacity:0}
+.bvp-object-glasses .bvp-hit,.bvp-object-glasses .bvp-focus,.bvp-object-shirt .bvp-hit,.bvp-object-shirt .bvp-focus{r:48}
+.bvp-overhead-parasol{opacity:0;pointer-events:none;transition:opacity .6s}
+.has-umbrella .bvp-overhead-parasol{opacity:1}
+.bvp-parasol-shadow{transition:opacity .6s}
+.has-umbrella .bvp-parasol-shadow{opacity:.19}
+.bvp-sun{transition:transform 1.6s,filter 1.6s;transform-origin:760px 145px}
+.has-clock{--bp-sky-high:#c3b8dd;--bp-sky-low:#ffe0b4}
+.has-clock .bvp-sun{transform:translate(var(--bvp-sunset-x,-370px),var(--bvp-sunset-y,147px));filter:drop-shadow(0 0 25px #ffd0a288)}
+.has-clock .bvp-world{background:#d8bd9c}
+@media(max-width:750px){
+  .bvp-cloud-middle{transform:translate(75px,95px)}
+
+
+  .bvp-heading{left:7%;top:72px;width:72%;right:auto}
+  .ad-speech .bvp-heading h3{font-size:clamp(29px,6.3vw,43px);max-width:430px}
+  .ad-speech .bvp-heading p{font-size:clamp(14px,3.2vw,19px);max-width:330px}
+  .bvp-hit{r:79}
+  .bvp-object-umbrella .bvp-hit{r:104}
+}
+@media(max-width:390px){.ad-speech .bvp-heading h3{max-width:250px}.ad-speech .bvp-heading p{max-width:220px}}
+
+/* The advertising label follows the remaining object; the hand returns after 3s idle. */
+.bvp-hint{position:absolute;width:56px;height:72px;transform:translateX(-50%);z-index:4;pointer-events:none}
+.bvp-hint[hidden],.bvp-dialogue[hidden]{display:none}
+.bvp-finger{display:block;width:56px;height:72px;overflow:visible;animation:bvp-finger-tap 1.6s ease-in-out infinite;filter:drop-shadow(2px 3px 0 #b0805240)}
+.bvp-finger-ring{animation:bvp-finger-ring 1.6s ease-out infinite;transform-origin:22px 9px}
+.ad-speech .bvp-prompt{position:absolute;top:0;left:50%;width:max-content;max-width:min(225px,calc(100vw - 28px));transform:translateX(-50%) rotate(-4deg);margin:0;padding:0;background:none;border:0;box-shadow:none;color:#795040;font-family:"Comic Sans MS","Comic Sans","Segoe Print",cursive;font-size:clamp(18px,2.2vw,28px);font-weight:700;font-style:italic;line-height:1.12;letter-spacing:-.035em;-webkit-text-stroke:2.5px #fff5da;paint-order:stroke fill;text-shadow:1px 2px 0 #d8a56b;text-align:center;pointer-events:none;animation:bvp-caption-breathe 2.6s ease-in-out infinite}
+.bvp-dialogue{position:absolute;z-index:5;transform:translateX(-50%) rotate(-1deg);width:max-content;max-width:min(310px,calc(100% - 24px));padding:15px 22px;border:2.5px solid #794b45;border-radius:48% 52% 46% 54% / 45% 48% 52% 55%;background:#fff5df;color:#795040;box-shadow:2px 3px 0 #b88e5940;font-family:"Comic Sans MS","Comic Sans","Segoe Print",cursive;font-size:clamp(14px,1.65vw,20px);font-weight:700;line-height:1.25;text-align:center;pointer-events:none}
+.bvp-dialogue::after{content:"";position:absolute;bottom:-9px;left:var(--tail-x,60%);margin-left:-8px;width:16px;height:16px;background:#fff5df;border-right:2.5px solid #794b45;border-bottom:2.5px solid #794b45;transform:rotate(40deg)}
+/* Hand-drawn printed lettering, with open Cyrillic forms rather than cursive joins. */
+.ad-speech .bvp-heading,.ad-speech .bvp-prompt,.ad-speech .bvp-dialogue{font-family:inherit;font-style:normal;font-weight:400;letter-spacing:.025em}
+.ad-speech .bvp-heading h3{font-size:clamp(36px,5.5vw,72px);font-weight:400;font-style:normal;letter-spacing:.01em;-webkit-text-stroke:2px #794b45;text-shadow:1px 2px 0 #fff6df}
+.ad-speech .bvp-heading p{font-size:clamp(20px,2.1vw,28px);font-weight:400;font-style:normal;letter-spacing:.025em;-webkit-text-stroke:.35px currentColor;text-shadow:none}
+.ad-speech .bvp-prompt{font-size:clamp(22px,2.6vw,33px);line-height:1.1;-webkit-text-stroke:2px #fff5da;text-shadow:1px 1px 0 #d8a56b}
+.ad-speech .bvp-dialogue{font-size:clamp(18px,1.9vw,24px);line-height:1.15;-webkit-text-stroke:.25px currentColor}
+.bvp-dialogue[data-placement=below]::after{top:-9px;bottom:auto;border-right:0;border-bottom:0;border-left:2.5px solid #794b45;border-top:2.5px solid #794b45;transform:rotate(45deg)}
+.bvp-speaker{cursor:pointer;outline:none}
+.bvp-speaker:focus-visible{outline:3px dashed #794b45;outline-offset:6px}
+.ad-speech .bvp-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.bvp-beach.is-paused .bvp-prompt,.bvp-beach.is-paused .bvp-finger,.bvp-beach.is-paused .bvp-finger-ring{animation-play-state:paused}
+@keyframes bvp-finger-tap{0%,25%,75%,100%{translate:0 0;rotate:0deg}45%,55%{translate:-2px -5px;rotate:-4deg}}
+@keyframes bvp-finger-ring{0%,28%,75%,100%{opacity:0;scale:.65}40%{opacity:1;scale:.65}65%{opacity:0;scale:1.5}}
+@media(max-width:750px){.ad-speech .bvp-prompt{font-size:17px;max-width:170px;padding:0;border:0;box-shadow:none}.bvp-dialogue{font-size:14px;padding:12px 19px}}
+@media(max-width:750px){.ad-speech .bvp-heading h3{font-size:clamp(34px,7vw,48px)}.ad-speech .bvp-heading p{font-size:19px}.ad-speech .bvp-prompt{font-size:21px}.ad-speech .bvp-dialogue{font-size:18px}}
+@keyframes bvp-caption-breathe{0%,100%{scale:.99}50%{scale:1.035}}
+@media(prefers-reduced-motion:reduce){.ad-speech .bvp-prompt,.bvp-finger,.bvp-finger-ring{animation:none}.bvp-beach *{transition:none!important}.bvp-object:hover .bvp-object-art{transform:none}}
+
+/* Each visible letter is an original pen path, with a warm ink edge and paint inside. */
+.bvp-lettering{display:block;overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.bvp-lettering-text{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.bvp-letter-edge{stroke:#fff5da;stroke-width:6.5}
+.bvp-letter-ink{stroke:#795044;stroke-width:3}
+.bvp-heading h3 .bvp-letter-edge{stroke:#865449;stroke-width:7.4}
+.bvp-heading h3 .bvp-letter-ink{stroke:#f6c57d;stroke-width:4.7}
+.bvp-heading p .bvp-letter-edge,.bvp-dialogue .bvp-letter-edge{stroke:none}
+.bvp-dialogue .bvp-letter-ink{stroke-width:2.5}
+.ad-speech .bvp-heading h3{font-size:clamp(32px,4.3vw,58px);line-height:1;margin-bottom:5px;max-width:none;text-shadow:none;-webkit-text-stroke:0}
+.ad-speech .bvp-heading p{font-size:clamp(16px,1.6vw,23px);line-height:1;max-width:none;text-shadow:none;-webkit-text-stroke:0}
+.ad-speech .bvp-prompt{font-size:clamp(18px,2vw,26px);line-height:1;text-shadow:none;-webkit-text-stroke:0}
+.ad-speech .bvp-dialogue{font-size:clamp(14px,1.5vw,19px);line-height:1;-webkit-text-stroke:0}
+@media(max-width:750px){.ad-speech .bvp-heading h3{font-size:27px}.ad-speech .bvp-heading p{font-size:14px}.ad-speech .bvp-prompt{font-size:17px}.ad-speech .bvp-dialogue{font-size:14px}}

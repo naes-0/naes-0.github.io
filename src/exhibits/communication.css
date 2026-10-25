@@ -1,0 +1,102 @@
+.ad-communication .ad-scene{border:0;border-radius:0;box-shadow:none;background:#fff;color:#222;padding:48px 18px 32px;gap:22px;min-height:710px}
+.ad-communication .communication-heading{position:relative;z-index:2;width:min(100%,960px);text-align:center}
+.ad-communication .communication-heading h3{color:#222;font-size:clamp(40px,5.3vw,76px);letter-spacing:-.055em;font-weight:500;line-height:1.08;margin:0;text-wrap:balance}
+.ad-communication .communication-workbench{position:relative;width:min(100%,760px);aspect-ratio:820/570;flex:none;margin:0 auto}
+.ad-communication .communication-art{display:block;width:100%;height:100%;overflow:visible}
+.ad-communication .communication-wire{stroke-width:3;opacity:0;transition:opacity .2s}
+.ad-communication .communication-wire.is-connected{opacity:1}
+.ad-communication .communication-contact{position:absolute;left:var(--contact-x);top:var(--contact-y);transform:translate(-50%,-50%);border:0;border-radius:0;padding:0;background:transparent;width:44px;height:44px;cursor:pointer}
+.ad-communication .communication-contact::before{content:'';position:absolute;inset:15px;background:#2c83dc;border:1px solid #21629f;border-radius:0;opacity:0;transition:opacity .15s}
+.ad-communication .communication-contact:hover::before,.ad-communication .communication-contact:focus-visible::before,.ad-communication .communication-contact.is-neighbour::before{opacity:.35}
+.ad-communication .communication-contact[aria-pressed=true]::before{opacity:1}
+.ad-communication .communication-contact:focus-visible{outline:1px solid #397fc4;outline-offset:-8px}
+.ad-communication .communication-led-glow{opacity:0;transition:opacity .5s}
+.ad-communication .communication-lit .communication-led-glow{opacity:1}
+.ad-communication .communication-lit .communication-led-lens{fill:#ff6c33;stroke:#cf3422}
+.ad-communication .communication-switch-blade{transform:rotate(-35deg);transform-origin:508px 440px;transition:transform .3s}
+.ad-communication .communication-switch-closed .communication-switch-blade{transform:rotate(0deg)}
+.ad-communication .communication-battery-heat,.ad-communication .communication-burn-flare,.ad-communication .communication-sparks,.ad-communication .communication-smoke{opacity:0}
+.ad-communication .communication-short .communication-battery-heat{opacity:.7;animation:comm-heat 1.2s ease-out both}
+.ad-communication .communication-burned .communication-led-lens{fill:#4e4241;stroke:#2b2929;transition:fill .25s .8s,stroke .25s .8s}
+.ad-communication .communication-burned .communication-burn-flare{animation:comm-flare 1.15s ease-out both}
+.ad-communication .communication-burned .communication-smoke{transform-box:fill-box;transform-origin:center bottom;animation:comm-smoke 3.4s ease-out .45s both;filter:blur(.6px)}
+.ad-communication .communication-reset{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);width:40px;height:40px;padding:10px;background:transparent;color:#555;border:0;cursor:pointer}
+.ad-communication .communication-reset svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ad-communication .communication-reset:hover{color:#111;background:#f3f3f3}
+.ad-communication .communication-reset:focus-visible{outline:2px solid #397fc4}
+.ad-communication .communication-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+@keyframes comm-flare{0%{opacity:0}12%,30%{opacity:1}55%{opacity:.65}100%{opacity:0}}
+.ad-communication .communication-burned .communication-sparks{transform-box:fill-box;transform-origin:center;animation:comm-sparks 1.3s ease-out .1s both}
+@keyframes comm-sparks{0%{opacity:0;transform:scale(.35)}18%{opacity:1}100%{opacity:0;transform:scale(1.8)}}
+@keyframes comm-smoke{0%{opacity:0;transform:translateY(12px) scale(.65)}20%,42%{opacity:.7}100%{opacity:0;transform:translate(-12px,-55px) scale(1.35)}}
+@keyframes comm-heat{0%{opacity:0;stroke-width:1}50%{opacity:1;stroke-width:4}100%{opacity:.7;stroke-width:2}}
+@media(max-width:600px){.ad-communication .ad-scene{padding:48px 12px 30px;min-height:460px}.ad-communication .communication-heading h3{font-size:clamp(34px,8vw,48px)}.ad-communication .communication-contact{width:30px;height:30px}.ad-communication .communication-contact::before{inset:11px}}
+@media(prefers-reduced-motion:reduce){.ad-communication .communication-wire,.ad-communication .communication-led-glow,.ad-communication .communication-switch-blade,.ad-communication .communication-contact::before,.ad-communication .communication-led-lens{transition:none!important}.ad-communication .communication-short .communication-battery-heat,.ad-communication .communication-burned .communication-burn-flare,.ad-communication .communication-burned .communication-sparks,.ad-communication .communication-burned .communication-smoke{animation:none!important}.ad-communication .communication-burned .communication-burn-flare,.ad-communication .communication-burned .communication-sparks{opacity:0}.ad-communication .communication-burned .communication-smoke{opacity:.25}}
+/* A single exaggerated short-circuit event, with persistent damage afterwards. */
+.ad-communication .communication-battery-hot,.ad-communication .communication-battery-scorch,.ad-communication .communication-battery-aura,.ad-communication .communication-battery-steam,.ad-communication .communication-switch-scorch,.ad-communication .communication-switch-sparks{opacity:0}
+.ad-communication .communication-overheated .communication-battery-hot{animation:comm-battery-temperature 3s ease-out both}
+.ad-communication .communication-overheated .communication-battery-aura{animation:comm-battery-aura 3.2s ease-out both}
+.ad-communication .communication-overheated .communication-battery-steam{transform-box:fill-box;transform-origin:center bottom;animation:comm-steam 4s ease-out .35s both;filter:blur(.7px)}
+.ad-communication .communication-overheated .communication-battery-scorch{animation:comm-damage-appear .8s ease-out .8s both}
+.ad-communication .communication-wire-heat{stroke:#ff951b;stroke-width:7;opacity:0;animation:comm-wire-overheat 2.4s ease-out both}
+.ad-communication .communication-wire-char{stroke:#241f1b;stroke-width:4.5;stroke-dasharray:12 29 5 21;opacity:0;animation:comm-damage-appear .9s ease-out .65s both}
+.ad-communication .communication-wire-cracks{stroke:#fff4d7;stroke-width:1.3;stroke-dasharray:2 41 1 26;opacity:0;animation:comm-damage-appear .9s ease-out 1s both}
+.ad-communication .communication-switch-damaged .communication-switch-contact{fill:#39302a;stroke:#201c18;transition:fill .5s .8s,stroke .5s .8s}
+.ad-communication .communication-switch-damaged .communication-switch-scorch{animation:comm-damage-appear .8s ease-out .9s both}
+.ad-communication .communication-switch-damaged .communication-switch-sparks{transform-box:fill-box;transform-origin:center;animation:comm-sparks 1.4s ease-out .3s both}
+@keyframes comm-battery-temperature{0%{opacity:0}30%,55%{opacity:.5}100%{opacity:.16}}
+@keyframes comm-battery-aura{0%{opacity:0}30%,55%{opacity:.9}100%{opacity:0}}
+@keyframes comm-steam{0%{opacity:0;transform:translateY(12px) scale(.7)}22%,50%{opacity:.8}100%{opacity:0;transform:translateY(-45px) scale(1.25)}}
+@keyframes comm-wire-overheat{0%{opacity:0;stroke-width:3}25%,45%{opacity:1;stroke-width:7}100%{opacity:0;stroke-width:4}}
+@keyframes comm-damage-appear{from{opacity:0}to{opacity:.85}}
+.ad-communication .ad-scene:not(.communication-short) :is(.communication-battery-aura,.communication-battery-steam,.communication-wire-heat,.communication-switch-sparks){animation:none;opacity:0}
+@media(prefers-reduced-motion:reduce){
+ .ad-communication .communication-overheated .communication-battery-hot,.ad-communication .communication-overheated .communication-battery-aura,.ad-communication .communication-overheated .communication-battery-steam,.ad-communication .communication-overheated .communication-battery-scorch,.ad-communication .communication-wire-heat,.ad-communication .communication-wire-char,.ad-communication .communication-wire-cracks,.ad-communication .communication-switch-damaged .communication-switch-scorch,.ad-communication .communication-switch-damaged .communication-switch-sparks{animation:none!important}
+ .ad-communication .communication-overheated .communication-battery-hot{opacity:.16}
+ .ad-communication .communication-overheated .communication-battery-scorch,.ad-communication .communication-wire-char,.ad-communication .communication-switch-damaged .communication-switch-scorch{opacity:.85}
+ .ad-communication .communication-wire-cracks{opacity:.6}
+ .ad-communication .communication-switch-damaged .communication-switch-contact{transition:none}
+}
+
+/* Operate the blade/body independently; the terminal hit targets stay separate. */
+.ad-communication .communication-switch-toggle{position:absolute;left:59.7561%;top:65.7895%;width:14.6341%;height:16.6667%;padding:0;border:0;border-radius:2px;background:transparent;cursor:pointer}
+.ad-communication .communication-switch-toggle:focus-visible{outline:2px solid #397fc4;outline-offset:3px}
+
+/* Rebuilding wires never repairs a burned component or replays its failure. */
+.ad-communication .communication-battery-settled :is(.communication-battery-hot,.communication-battery-aura,.communication-battery-steam,.communication-battery-heat),
+.ad-communication .communication-led-settled :is(.communication-burn-flare,.communication-smoke,.communication-sparks),
+.ad-communication .communication-switch-settled .communication-switch-sparks{animation:none!important;opacity:0!important}
+.ad-communication .communication-battery-settled .communication-battery-scorch,
+.ad-communication .communication-switch-settled .communication-switch-scorch{animation:none!important;opacity:.85}
+.ad-communication .communication-led-settled .communication-led-lens{transition:none}
+@keyframes comm-heat{0%{opacity:0;stroke-width:1}50%{opacity:1;stroke-width:4}100%{opacity:0;stroke-width:2}}
+
+/* Approved soldering-mat study, integrated locally. */
+/* Terminal pads: translucent solder-mask centre, metal rim and etched corners. */
+.ad-communication .communication-contact::before{inset:12px;border:1px solid #aed6c5;border-radius:2px;background:linear-gradient(135deg,#e1f2d326,#183d4533);box-shadow:inset 0 1px 0 #e7f6df66,0 1px 3px #17353c77;opacity:.45;transition:opacity .15s,border-color .15s,box-shadow .15s}
+.ad-communication .communication-contact::after{content:'';position:absolute;inset:8px;pointer-events:none;opacity:0;background:linear-gradient(#b5e5d5,#b5e5d5) left top/7px 1px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) left top/1px 7px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) right top/7px 1px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) right top/1px 7px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) left bottom/7px 1px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) left bottom/1px 7px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) right bottom/7px 1px no-repeat,linear-gradient(#b5e5d5,#b5e5d5) right bottom/1px 7px no-repeat;transition:opacity .15s}
+.ad-communication .communication-contact:is(:hover,:focus-visible,.is-neighbour)::before{opacity:.8;background:linear-gradient(135deg,#d3f7dc33,#2f7c7a22)}
+.ad-communication .communication-contact:is(:hover,:focus-visible)::after{opacity:1}
+.ad-communication .communication-contact.is-neighbour::after{opacity:.4}
+.ad-communication .communication-contact[aria-pressed=true]::before{opacity:1;border-color:#ffe6a4;background:linear-gradient(135deg,#ffe6a455,#e5b46511);box-shadow:inset 0 1px 0 #fff0c5aa,0 0 9px #ffe6a466}
+.ad-communication .communication-contact[aria-pressed=true]::after{opacity:1;filter:sepia(.9) saturate(1.4)}
+.ad-communication .communication-contact:focus-visible{outline:1px solid #ffe6a4;outline-offset:-5px}
+
+.ad-communication .ad-scene{height:calc(100dvh - 100px);min-height:570px;padding:20px 28px;gap:0;color:#ecf0d6;background-color:#406e75;background-image:linear-gradient(#d0e9e61c 1px,transparent 1px),linear-gradient(90deg,#d0e9e61c 1px,transparent 1px),linear-gradient(#d0e9e60b 1px,transparent 1px),linear-gradient(90deg,#d0e9e60b 1px,transparent 1px);background-size:100px 100px,100px 100px,20px 20px,20px 20px}
+.ad-communication .ad-scene:before{content:'';position:absolute;inset:18px;z-index:-1;pointer-events:none;border:2px solid #244b51;box-shadow:inset 0 2px 5px #183b4555;border-radius:14px}
+.ad-communication .communication-workbench{width:min(100%,950px,calc((100dvh - 140px)*1.46));aspect-ratio:730/500;margin:0 auto}
+.ad-communication .communication-art{filter:drop-shadow(1px 3px 2px #142a3433)}
+.ad-communication .communication-heading{position:absolute;top:24px;left:0;z-index:3;width:100%;display:flex;align-items:center;justify-content:center;gap:14px;padding:0 18px;pointer-events:none}
+.ad-communication .communication-heading h3{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:clamp(32px,5.8vw,78px);line-height:1.05;letter-spacing:-.035em;text-transform:uppercase;padding:0;margin:0;background:transparent;color:#080b0c;-webkit-text-stroke:0;text-shadow:none;animation:none}
+.ad-communication .communication-reset{position:static;transform:none;pointer-events:auto;flex:none;display:grid;place-items:center;width:46px;height:46px;border:1px solid #a4c6bc88;border-radius:50%;padding:0;background:#264d5366;color:#fff;font:35px/1 Arial,sans-serif;cursor:pointer;box-shadow:inset 0 1px 0 #d8f3df22}
+.ad-communication .communication-reset:hover{background:#24494f;border-color:#fff;color:#fff}.ad-communication .communication-reset:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.ad-communication .communication-switch-toggle{left:61.6438%;top:61%;width:16.4384%;height:19%}
+.communication-tap{position:absolute;left:9.589%;top:35.2%;width:54px;height:54px;pointer-events:none;transform:translate(-50%,-50%);color:#e9e4ac}
+.communication-tap>span{position:absolute;inset:8px;border:1.5px solid currentColor;border-radius:50%;animation:comm-tap-ring 3.6s ease-out infinite}
+.communication-tap svg{position:absolute;left:24px;top:23px;width:32px;height:40px;fill:#f6f0df;stroke:#343c32;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;animation:comm-tap-finger 3.6s ease-in-out infinite;filter:drop-shadow(1px 2px 1px #0003)}
+.communication-started .communication-tap{display:none}
+.communication-tap *{animation-play-state:var(--comm-play,paused)}
+@keyframes comm-tap-finger{0%,25%,100%{transform:translate(8px,13px);opacity:0}40%,70%{transform:translate(0,0);opacity:1}53%{transform:translate(-3px,-4px) scale(.93);opacity:1}}
+@keyframes comm-tap-ring{0%,42%,100%{transform:scale(.45);opacity:0}53%{transform:scale(.6);opacity:1}75%{transform:scale(1.35);opacity:0}}
+@media(max-width:650px){.ad-communication .ad-scene{height:auto;min-height:0;padding:100px 12px 32px}.ad-communication .communication-heading{top:30px;gap:8px}.ad-communication .communication-heading h3{font-size:clamp(23px,7.3vw,40px)}.ad-communication .communication-reset{width:36px;height:36px;font-size:28px}.ad-communication .communication-workbench{width:100%}.communication-tap{width:42px;height:42px}.communication-tap svg{width:25px;height:32px;left:20px;top:18px}}
+@media(prefers-reduced-motion:reduce){.communication-tap *{animation:none!important}.communication-tap svg{opacity:1}.communication-tap>span{opacity:.7}.ad-communication .communication-contact:before,.ad-communication .communication-contact:after{transition:none}}

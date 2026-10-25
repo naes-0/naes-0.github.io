@@ -1,0 +1,76 @@
+@font-face{font-family:RobotoChat;src:url('/fonts/Roboto-Variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+/* Source: original CASIYES start-gate. No third-party fonts or chat service. */
+.ad-casino .ad-scene{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:0;padding:0;min-height:700px;border:0;border-radius:0;box-shadow:none;background:#06120d;color:#f0ffe3;text-align:left;font-family:'Cascadia Mono','Lucida Console','Courier New',monospace}
+.casino-gate{position:relative;isolation:isolate;overflow:hidden;display:grid;place-items:center;min-height:700px;padding:70px 55px;background:radial-gradient(circle at 50% 50%,#fff45c42 0 11%,transparent 38%),repeating-linear-gradient(135deg,#ff2d7b1c 0 14px,#26ff9a12 14px 28px),#06120de8}
+.casino-gate::before{content:'';position:absolute;inset:20px;border:10px dotted #f8ff52;box-shadow:inset 0 0 24px #ff2d7b,0 0 28px #26ff9a;pointer-events:none;z-index:1}
+.casino-rays{position:absolute;width:150%;aspect-ratio:1;background:repeating-conic-gradient(from 0deg,#ff2d7b2e 0deg 10deg,transparent 10deg 22deg,#f8ff5224 22deg 31deg,transparent 31deg 45deg);pointer-events:none}
+.casino-earning{position:relative;z-index:2;display:block;width:min(100%,720px);padding:28px 20px;border:6px solid #fffbd1;background:linear-gradient(180deg,#fff96e 0 38%,#ffae00 39% 55%,#ff2d7b 56% 100%);box-shadow:0 0 0 7px #ff2d7b,0 0 0 13px #2cff9f,0 18px 0 13px #140417,0 0 58px 24px #ff2d7ba8;color:#250518;font-weight:900;letter-spacing:-.055em;text-align:center;text-shadow:3px 3px 0 #fff36a;text-transform:uppercase}
+.casino-earning span,.casino-earning strong{display:block}
+.casino-earning span{font-size:clamp(20px,2.4vw,36px)}
+.casino-earning strong{font-size:clamp(28px,4.4vw,65px);line-height:.95;overflow-wrap:anywhere}
+.casino-earning:focus-visible{outline:5px solid #fff;outline-offset:18px}
+.ad-casino .ad-close{z-index:4;right:auto;left:32px;top:29px;color:#f8ff52;background:#06120d;border-radius:0;opacity:.8}
+.casino-chat{min-width:0;padding:30px 22px 22px;display:flex;flex-direction:column;gap:20px;background:#100713;border-left:2px solid #ff00b7;box-shadow:inset 3px 0 16px #ff00b724;font-family:RobotoChat,Arial,sans-serif}
+.ad-casino .casino-chat h3{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0;color:#fff0fb;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-.025em;text-shadow:none}
+.casino-live{flex:none;width:9px;height:9px;background:#ff00b7;border-radius:50%;box-shadow:0 0 7px #ff00b7,0 0 18px #ff00b7}
+.casino-stream{height:440px;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#be167e transparent;display:flex;flex-direction:column;gap:18px;padding-right:4px}
+.casino-message{width:94%;margin-right:auto;display:flex;align-items:flex-start;gap:10px;flex-shrink:0;min-width:0}
+.casino-avatar{flex:none;width:40px;height:40px;border-radius:50%;background-color:#58354d;background-image:url(/assets/casino-avatars.jpg);background-size:300% 300%;display:block;box-shadow:0 0 0 1px #20385514}
+.casino-message>div{min-width:0;flex:1;padding:11px 13px;border:1px solid #b3278155;border-radius:0 8px 8px;background:#241126;box-shadow:0 2px 0 #050206}
+.casino-message b{display:block;font-size:12px;font-weight:600;color:#ff42cd;text-shadow:0 0 8px #ff00b744;line-height:1.3;overflow-wrap:anywhere;margin-bottom:5px}
+.ad-casino .casino-message p{font-size:14px;line-height:1.5;color:#f4e2ef;overflow-wrap:anywhere}
+.casino-own{flex-direction:row-reverse;margin-left:auto;margin-right:0}
+.casino-own b{color:#ff77dc;text-align:right}.casino-own>div{border-color:#ff00b799;background:#3b0b35;border-radius:8px 0 8px 8px;box-shadow:0 0 12px #ff00b71a}
+.ad-casino .casino-own p{text-align:right}
+.casino-avatar-empty{background-image:none;background-color:#2c0c2d;color:#ff41ca;display:grid;place-items:center}
+.casino-avatar-empty svg{width:32px;height:32px;opacity:.4}
+.casino-form{display:flex;flex-direction:column;gap:10px;margin-top:auto}
+.ad-casino .casino-form input{border:1px solid #8f296f;border-radius:4px;background:#170b1c;color:#fcebf6;padding:13px 10px;font-size:13px;line-height:1.3}
+.casino-nickname{display:flex;flex-direction:column;gap:6px;color:#bf9db6;font-size:12px}
+.casino-form input::placeholder{color:#bf9db6}
+.casino-form button{align-self:end;padding:10px 12px;border:1px solid #ff74df;border-radius:3px;background:#ff00b7;color:#170214;box-shadow:0 0 10px #ff00b799,0 0 24px #ff00b744;font-size:14px;font-weight:700;text-transform:uppercase}
+@media(prefers-reduced-motion:no-preference){
+  .casino-gate::before{animation:casino-marquee 1.8s steps(2,end) infinite}
+  .casino-rays{animation:casino-rays 12s linear infinite}
+  .casino-earning{animation:casino-pulse 1.2s steps(2,end) infinite alternate}
+  .casino-new{animation:casino-arrive .3s ease-out both}
+  .ad-casino:not(.ad-in-view) .casino-gate::before,.ad-casino:not(.ad-in-view) .casino-rays,.ad-casino:not(.ad-in-view) .casino-earning{animation-play-state:paused}
+  @keyframes casino-marquee{50%{border-color:#ff2d7b;box-shadow:inset 0 0 24px #26ff9a,0 0 28px #f8ff52}}
+  @keyframes casino-rays{to{transform:rotate(360deg)}}
+  @keyframes casino-pulse{from{filter:brightness(.92) saturate(1.05);transform:scale(.985)}to{filter:brightness(1.15) saturate(1.25);transform:scale(1.015)}}
+  @keyframes casino-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media(max-width:1000px){.ad-casino .ad-scene{grid-template-columns:minmax(0,1fr) 300px}.casino-chat{padding:26px 18px}.casino-gate{padding-inline:45px}.casino-earning strong{font-size:clamp(23px,4vw,44px)}}
+@media(max-width:750px){
+  .ad-casino .ad-scene{display:flex;flex-direction:column;gap:0;padding:0;min-height:0}
+  .casino-gate{min-height:440px;width:100%;padding:60px 42px}
+  .casino-gate::before{inset:14px;border-width:8px}
+  .casino-earning{padding:22px 8px;border-width:4px}
+  .casino-earning span{font-size:20px}.casino-earning strong{font-size:clamp(20px,6.5vw,40px)}
+  .casino-chat{width:100%;border-left:0;border-top:2px solid #ff00b7;padding:24px}
+  .casino-stream{height:280px}
+  .ad-casino .ad-close{left:24px;top:22px}
+}
+@media(prefers-reduced-motion:reduce){.ad-casino .ad-scene *,.casino-gate::before{animation:none!important;transition:none!important}}
+
+.ad-casino .casino-form input:focus-visible{outline:2px solid #ff00b7;outline-offset:3px;box-shadow:0 0 12px #ff00b755}
+.casino-form button:hover{background:#ff5fd5;box-shadow:0 0 16px #ff00b7,0 0 30px #ff00b766}
+
+/* Match the incoming ERGO slide to the viewport, with no outer strips. */
+.ad-casino{scroll-margin-top:-32px}
+.ad-casino .ad-scene{height:100svh;min-height:0;align-items:stretch}
+.casino-gate{height:100%;min-height:0}
+.casino-chat{min-height:0;height:100%;overflow:hidden}
+.casino-stream{height:auto;flex:1}
+.casino-chat h3,.casino-form{flex-shrink:0}
+@media(max-width:750px){
+  .ad-casino .ad-scene{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:38% 62%;gap:0}
+  .casino-gate{padding-block:32px}
+  .casino-earning{padding-block:16px}
+  .casino-chat{padding:16px 22px;gap:12px}
+  .ad-casino .casino-chat h3{font-size:18px}
+  .casino-form{gap:7px}
+  .ad-casino .casino-form input{padding:10px}
+  .casino-nickname{gap:4px}
+}
+@media(min-width:751px) and (max-height:650px){.casino-chat{padding-block:18px;gap:12px}}

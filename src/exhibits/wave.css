@@ -1,0 +1,31 @@
+/* Fictional search engine; every selector belongs to the Wave teaser. */
+.ad-wave .ad-scene{min-height:680px;min-height:min(760px,90svh);padding:100px 24px 76px;border:0;border-radius:0;box-shadow:none;background:#fff;background-image:none;color:#202124;gap:0;font-family:Arial,Helvetica,sans-serif}
+.ad-wave .wave-search-page{width:min(100%,920px);display:flex;flex-direction:column;align-items:center;text-align:center}
+.ad-wave .wave-search-identity{margin-bottom:38px}
+.ad-wave .wave-search-logo{margin:0;font-size:clamp(64px,9vw,104px);font-weight:500;font-style:normal;line-height:1.1;letter-spacing:-.065em;rotate:none;transform:none;color:#202124}
+.ad-wave .wave-search-logo>span{color:#ed2227}
+.ad-wave .wave-search-slogan{margin:14px 0 0;max-width:none;color:#686b70;font:400 16px/1.4 Arial,Helvetica,sans-serif;letter-spacing:0}
+.ad-wave .wave-search-form{width:100%;margin:0}
+.ad-wave .wave-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ad-wave .wave-search-box{display:flex;align-items:center;gap:14px;width:100%;padding:4px 4px 4px 20px;border:3px solid #ffcc00;border-radius:17px;background:#fff;transition:box-shadow .2s}
+.ad-wave .wave-search-box:focus-within{box-shadow:0 0 0 4px #ffcc0029}
+.ad-wave .wave-search-icon{width:23px;height:23px;flex-shrink:0;stroke:#9b9da2;stroke-width:1.8;stroke-linecap:round}
+.ad-wave .wave-search-box input{min-width:0;width:100%;height:48px;flex:1;padding:6px 0;background:#fff;color:#202124;font:400 22px/1.25 Arial,Helvetica,sans-serif;border:0;border-radius:0;outline:none;box-shadow:none}
+.ad-wave .wave-search-box input:focus-visible{outline:none}
+.ad-wave .wave-search-submit{align-self:stretch;min-width:116px;padding:10px 24px;background:#ffcc00;color:#202124;border:0;border-radius:10px;font:400 18px/1.2 Arial,Helvetica,sans-serif;cursor:pointer;transition:background .18s}
+.ad-wave .wave-search-submit:hover{background:#f4c300}
+.ad-wave .wave-search-submit:focus-visible,.ad-wave .wave-search-suggestions button:focus-visible{outline:3px solid #325bd8;outline-offset:4px}
+.ad-wave .wave-search-suggestions{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:10px;margin-top:17px;padding-left:4px}
+.ad-wave .wave-search-suggestions button{max-width:100%;padding:8px 13px;border:0;border-radius:9px;background:#f3f4f5;color:#62666c;font:400 14px/1.35 Arial,Helvetica,sans-serif;cursor:pointer;text-align:left;transition:background .18s,color .18s}
+.ad-wave .wave-search-suggestions button:hover{background:#e9ebee;color:#202124}
+@media(max-width:600px){
+  .ad-wave .ad-scene{min-height:600px;min-height:min(680px,90svh);padding:75px 18px 60px}
+  .ad-wave .wave-search-identity{margin-bottom:30px}
+  .ad-wave .wave-search-box{gap:9px;padding-left:12px;border-radius:13px}
+  .ad-wave .wave-search-icon{width:18px;height:18px}
+  .ad-wave .wave-search-box input{height:44px;font-size:18px}
+  .ad-wave .wave-search-submit{min-width:0;padding:10px 14px;font-size:15px;border-radius:7px}
+  .ad-wave .wave-search-suggestions{gap:8px;margin-top:14px;padding-left:0}
+  .ad-wave .wave-search-suggestions button{padding:7px 10px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.ad-wave .wave-search-box,.ad-wave .wave-search-submit,.ad-wave .wave-search-suggestions button{transition:none}}

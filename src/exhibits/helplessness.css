@@ -1,0 +1,22 @@
+/* Original project's ONY Mega Sans and interface tokens, scoped to its teaser. */
+@font-face{font-family:ONYPortfolio;src:url('/fonts/ony-mega-sans-light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:ONYPortfolio;src:url('/fonts/ony-mega-sans-regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:ONYPortfolio;src:url('/fonts/ony-mega-sans-bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+[data-gallery=ads] .ad-learned-helplessness{width:100%;scroll-margin-top:-32px}
+.ad-learned-helplessness .ad-scene{--lh-ink:#eeeade;--lh-muted:#969388;--lh-line:rgba(238,234,222,.17);--lh-acid:#d6ff3f;height:100svh;min-height:0;padding:clamp(24px,4svh,48px) clamp(16px,4vw,64px);border:0;border-radius:0;box-shadow:none;gap:0;align-items:stretch;justify-content:start;text-align:left;color:var(--lh-ink);font-family:ONYPortfolio,'Trebuchet MS',Arial,sans-serif;font-weight:300;background:radial-gradient(circle at 80% 10%,rgba(214,255,63,.055),transparent 32rem),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),#11110f;background-size:auto,100% 3rem,auto}
+.helpless-heading{padding:0 56px clamp(18px,3svh,32px) 0;border-bottom:1px solid var(--lh-line);flex-shrink:0}
+.ad-learned-helplessness h3{max-width:none;margin:0;color:var(--lh-ink);font-family:inherit;font-size:clamp(36px,6vw,96px);font-weight:400;line-height:.95;letter-spacing:-.045em}
+.helpless-column{display:flex;flex-direction:column;gap:clamp(16px,3svh,32px);width:min(928px,100%);margin:0 auto;padding-top:clamp(20px,4svh,40px);flex:1;min-height:0}
+.ad-learned-helplessness .demo-chat{flex:1;min-height:0;max-height:none;gap:16px;padding-right:16px;scrollbar-color:#969388 #11110f;overscroll-behavior:contain}
+.ad-learned-helplessness .demo-chat p{width:min(736px,88%);max-width:none;margin:0;padding:1.2rem 1.3rem;border:0;border-left:2px solid var(--lh-line);border-radius:0;align-self:start;color:var(--lh-ink);background:rgba(255,255,255,.025);font-size:clamp(15px,1.3vw,18px);font-weight:300;line-height:1.68;overflow-wrap:anywhere;flex-shrink:0}
+.ad-learned-helplessness .demo-chat .human{align-self:end;border-left:0;border-right:2px solid var(--lh-acid);background:rgba(214,255,63,.055);color:var(--lh-ink)}
+.helpless-composer{display:grid;grid-template-columns:1fr auto;gap:12px;flex-shrink:0}
+.helpless-composer textarea{width:100%;min-width:0;min-height:90px;resize:none;padding:16px;border:1px solid var(--lh-line);border-radius:0;background:transparent;color:var(--lh-ink);font:300 16px/1.45 ONYPortfolio,'Trebuchet MS',Arial,sans-serif}
+.helpless-composer textarea::placeholder{color:var(--lh-muted);opacity:1}
+.helpless-composer textarea:focus-visible{outline:0;border-color:var(--lh-acid)}
+.helpless-composer button{min-width:128px;padding:16px;border:0;border-radius:0;background:var(--lh-acid);color:#11110f;font:700 16px ONYPortfolio,'Trebuchet MS',Arial,sans-serif;box-shadow:none}
+.helpless-composer button:hover{background:#e0ff72}
+.helpless-composer button:focus-visible{outline:2px solid var(--lh-ink);outline-offset:4px}
+.ad-learned-helplessness .ad-close{top:16px;right:16px;width:48px;height:48px;font:300 44px/1 ONYPortfolio,Arial,sans-serif;color:var(--lh-ink);opacity:.8}
+@media(max-width:560px){.helpless-composer{grid-template-columns:1fr;gap:10px}.helpless-composer button{min-height:51px}.ad-learned-helplessness .demo-chat{padding-right:8px}.ad-learned-helplessness .demo-chat p{width:96%;padding:14px 16px}.ad-learned-helplessness h3{font-size:clamp(34px,8vw,44px)}}
+@media(max-height:550px){.ad-learned-helplessness .ad-scene{padding-block:16px}.helpless-heading{padding-bottom:14px}.ad-learned-helplessness h3{font-size:34px}.helpless-column{padding-top:16px;gap:12px}.helpless-composer{grid-template-columns:1fr auto}.helpless-composer textarea{min-height:64px;height:64px}.ad-learned-helplessness .demo-chat p{padding:10px 14px}}

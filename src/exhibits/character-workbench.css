@@ -1,0 +1,71 @@
+/* A quiet typographic worktable: the signs and their empty spaces are the UI. */
+.ad-characters .ad-scene{background:#eeece6;color:#242826;min-height:720px;padding:90px max(28px,6vw);background-image:radial-gradient(ellipse at 15% 10%,#fff9 0,transparent 65%)}
+.character-studio{width:min(100%,1100px);display:grid;gap:38px;justify-items:center}
+.ad-characters .character-studio-title{font-size:clamp(27px,3.2vw,43px);font-weight:400;letter-spacing:-.035em;margin:0 0 12px;line-height:1.15;color:#303a31}
+.ad-characters .character-workbench{display:grid;grid-template-columns:240px 100px minmax(0,430px);gap:35px;padding:0;align-items:center;justify-content:center}
+.ad-characters .parts-tray{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ad-characters .parts-tray button{display:grid;place-items:center;height:112px;border:0;border-bottom:1px solid #c6c7bf;background:transparent!important;border-radius:0;box-shadow:none;color:#252b29;font-family:'Noto Serif CJK SC','Yu Mincho','SimSun',serif;font-size:65px;transition:color .18s,background .18s}
+.ad-characters .parts-tray button span{display:block;transition:transform .18s}
+.ad-characters .parts-tray button:hover{background:#fff6!important;color:#a04a36}
+.ad-characters .parts-tray button:hover span{transform:translateY(-4px)}
+.ad-characters .parts-tray button[aria-pressed=true]{color:#a04a36;border-bottom-color:#a04a36}
+.ad-characters .parts-tray button:disabled{opacity:.3;cursor:default}
+.ad-characters .parts-tray button:focus-visible,.character-tool:focus-visible{outline:2px solid #a04a36;outline-offset:5px}
+.character-transfer{color:#92968b}
+.character-transfer{display:grid;place-items:center}
+.character-transfer svg{display:block;width:64px;height:64px;stroke:currentColor;stroke-width:1;fill:none;stroke-linecap:round;stroke-linejoin:round;transform:none}
+.character-paper{width:100%;position:relative;background:#fffef9;box-shadow:0 18px 45px #3139280d,0 1px 2px #31392811;padding:38px 32px 18px}
+.character-paper:after{content:'';position:absolute;inset:20px 20px 74px;border:1px solid #b7776540;pointer-events:none}
+.ad-characters .glyph-slots{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:258px;padding:0;border:0;background:transparent;font-size:154px;letter-spacing:0;color:#202723;font-family:'Noto Serif CJK SC','Yu Mincho','SimSun',serif}
+.ad-characters .glyph-slots span{display:grid;place-items:center;width:50%;font-size:100px;min-height:125px;border-right:1px dashed #b7776528}
+.ad-characters .glyph-slots span:last-child{border:0}
+.ad-characters .glyph-slots span:empty:before{content:'＋';font:200 24px Gogh,sans-serif;color:#babcb0}
+.character-paper-tools{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:15px}
+.character-tool{display:grid;place-items:center;flex:none;width:49px;height:49px;border:1px solid #aab0a2;border-radius:50%;color:#53604c;background:transparent;cursor:pointer;transition:background .2s,color .2s}
+.character-tool svg{width:27px;height:27px;stroke:currentColor;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.character-tool .character-arrow{display:block;width:26px;height:26px;transform:none;stroke-width:1.5}
+.character-tool[data-action=build]{background:#334a3b;border-color:#334a3b;color:#fffef9}
+.character-tool:hover{background:#e6e9df;color:#303e30}
+.character-tool:disabled{opacity:.28;cursor:default}
+.ad-characters .character-result{width:min(100%,660px);max-width:660px;border:0;border-top:1px solid #bbc0b1;border-radius:0;background:transparent;padding:28px 0 0;box-shadow:none;font-size:18px;gap:22px;justify-items:center;text-align:center}
+.ad-characters .character-result:empty{display:none}
+.ad-characters .character-result p{font-size:17px;letter-spacing:0;color:#4e5c50}
+.character-parts-details{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:min(100%,480px);margin:0;text-align:left}
+.character-parts-details>div{border-bottom:1px solid #b7beb04d;padding:0 0 14px}
+.character-parts-details dt{font-size:24px;line-height:1.6;color:#303e32}
+.character-parts-details dd{font-size:15px;color:#63715f;margin:0;line-height:1.5}
+.ad-characters .character-result .character-invitation{font-size:15px;line-height:1.65;max-width:480px;text-align:left}
+.ad-characters .new-character{width:min(100%,480px);grid-template-columns:1fr 1fr;align-items:end;gap:20px;text-align:left}
+.ad-characters .new-character input{border:0;border-bottom:1px solid #9da995;border-radius:0;background:#fff8;padding:12px 0;color:#293429;font:inherit}
+.ad-characters .new-character label{font-size:13px;color:#52604f;gap:4px}
+.ad-characters .new-character button{grid-column:1/-1;justify-self:center}
+@media(max-width:760px){
+ .ad-characters .ad-scene{min-height:640px;padding:60px 25px}
+ .ad-characters .character-workbench{grid-template-columns:minmax(0,150px) 28px minmax(0,320px);gap:15px}
+ .ad-characters .parts-tray{gap:12px}
+ .ad-characters .parts-tray button{height:80px;font-size:49px}
+ .character-transfer svg{width:28px;height:28px}
+ .character-paper{padding:28px 20px 15px}
+ .ad-characters .glyph-slots{height:205px;font-size:120px}
+ .ad-characters .glyph-slots span{font-size:65px}
+}
+@media(max-width:500px){
+ .ad-characters .ad-scene{padding:60px 24px;min-height:650px}
+ .ad-characters .character-workbench{grid-template-columns:minmax(0,1fr);gap:24px;max-width:340px}
+ .ad-characters .parts-tray{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+ .ad-characters .parts-tray button{height:67px;font-size:42px}
+ .character-transfer{display:none}
+ .character-paper{padding:25px 23px 15px}
+ .ad-characters .glyph-slots{height:190px;font-size:120px}
+ .ad-characters .glyph-slots span{font-size:73px}
+ .ad-characters .new-character{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.ad-characters .parts-tray button:hover span{transform:none}}
+
+.ad-characters .character-result{scroll-margin-top:125px;outline:none}
+.ad-characters .character-result:focus-visible{border-top-color:#53604c}
+
+.character-result-glyph{font:64px/1.1 'Noto Serif CJK SC','Yu Mincho','SimSun',serif;color:#202723;letter-spacing:0}
+@media(max-width:500px){.ad-characters .character-result{gap:15px;padding-top:20px}.character-result-glyph{font-size:50px}.ad-characters .new-character{gap:14px}.ad-characters .character-result .character-invitation{font-size:14px;line-height:1.5}.character-parts-details{gap:18px}.character-parts-details>div{padding-bottom:8px}}
+
+.character-tool .character-reset{display:block;width:32px;height:32px;transform:translateY(-5px);font:32px/32px Arial,"Segoe UI Symbol",sans-serif;text-align:center;letter-spacing:0}

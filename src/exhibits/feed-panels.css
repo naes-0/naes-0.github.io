@@ -1,0 +1,10 @@
+/* These four scenes use the full feed width; other scene layouts stay independent. */
+[data-gallery=ads] :is(.ad-wave,.ad-communication,.ad-worldview,.ad-fragmentary){width:100%;margin-inline:0}
+:is(.ad-wave,.ad-communication,.ad-worldview,.ad-fragmentary)>.ad-scene{border:0;border-radius:0;box-shadow:none}
+:is(.ad-wave,.ad-communication,.ad-worldview,.ad-fragmentary)>.ad-foot{width:min(1120px,calc(100% - 2 * var(--gutter)));margin-inline:auto}
+.ad-worldview>.ad-scene{min-height:max(620px,85svh)}
+/* Scene artwork reaches both viewport edges, without the yellow side gutters. */
+[data-gallery=ads] :is(.ad-paradigm,.ad-butterfly,.ad-speech,.ad-characters){width:100%;margin-inline:0}
+:is(.ad-paradigm,.ad-butterfly,.ad-speech,.ad-characters)>.ad-scene{border:0;border-radius:0;box-shadow:none}
+:is(.ad-paradigm,.ad-butterfly,.ad-speech,.ad-characters)>.ad-foot{width:min(1120px,calc(100% - 2 * var(--gutter)));margin-inline:auto}
+@media(max-width:750px){.ad-worldview>.ad-scene{min-height:600px}}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 170" preserveAspectRatio="none" fill="none">
+  <!-- Original vector illustration, drawn for the portfolio, 2026-10-25.
+       A soft foreleg enters from the left; the broad back of the paw is left clear for a link. -->
+  <defs>
+    <linearGradient id="paw-fur" x1="215" y1="24" x2="215" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff8e9"/>
+      <stop offset=".56" stop-color="#fff1d8"/>
+      <stop offset="1" stop-color="#edd7b9"/>
+    </linearGradient>
+    <linearGradient id="paw-toe" x1="425" y1="30" x2="440" y2="137" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#ead2b0"/>
+    </linearGradient>
+  </defs>
+  <path d="M-12 41C42 43 80 47 128 48C161 48 191 45 219 44C246 43 267 42 287 43C299 42 310 37 321 34L315 40C329 34 340 31 352 31L347 36C359 29 371 28 383 30C392 17 408 13 421 19C430 23 434 30 435 37C446 28 461 31 468 40C474 47 472 56 468 63C481 60 490 69 490 80C490 90 484 98 474 101C484 110 480 125 470 132C460 139 447 138 437 132C426 143 411 145 396 140C379 146 365 145 351 140L356 146C340 145 329 139 318 137L321 143C308 140 298 134 285 133C249 134 220 131 187 132C139 133 100 137 58 136C28 135 7 136-12 139Z" fill="url(#paw-fur)" stroke="#a99177" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M383 30C392 17 408 13 421 19C430 23 434 30 435 37C446 28 461 31 468 40C474 47 472 56 468 63C481 60 490 69 490 80C490 90 484 98 474 101C484 110 480 125 470 132C460 139 447 138 437 132C426 143 411 145 396 140C418 124 427 110 427 86C427 61 413 39 383 30Z" fill="url(#paw-toe)"/>
+  <path d="M435 37C430 45 428 51 428 58M468 63C459 65 454 70 452 76M474 101C461 99 453 104 449 109M437 132C429 128 423 121 422 114" stroke="#c6ad8b" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M-5 55C62 54 93 62 134 61M18 124C73 120 94 126 125 121" stroke="#fffdf5" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+  <g stroke="#c8ad89" stroke-width="1.25" stroke-linecap="round" opacity=".63">
+    <path d="m150 49 15 5m38-9 12 6m42-6 12 4m33-7 14 4m20-10 13 5m20-6 11 5"/>
+    <path d="m155 131 14-5m37 6 10-5m39 5 13-4m35 5 11-4m22 9 10-4m19 6 11-5"/>
+    <path d="m391 24 2 7m15-10 1 7m32 13 5 4m16 29 7 2m-8 39 6-2m-42 22 3-7"/>
+  </g>
+  <path d="M334 54C343 50 353 49 362 49M329 122C341 126 353 128 364 126" stroke="#fffdf5" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+</svg>

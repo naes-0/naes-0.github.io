@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru" data-page="cv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" data-i18n-content="description" content="Анастасия Замараева — медиахудожница, ArtTECH МИСИС. Проекты о языке, восприятии и правилах, которые мы принимаем за данность.">
+  <meta property="og:title" data-i18n-content="ogTitle" content="Анастасия Замараева — а может и нет">
+  <meta property="og:description" data-i18n-content="ogDescription" content="Я хочу задавать больше вопросов и искать больше ответов. Работы и манифест.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/portfolio/characters-in-hand.webp">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/Gogh-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    // Apply the stored theme before CSS paints; both language and theme stay independently selectable.
+    {
+      const page = location.pathname.split('/').pop().replace(/\.html$/, '');
+      document.documentElement.dataset.page = ['bio','portfolio','statement','manifesto','cv','contacts'].includes(page) ? page : 'home';
+      const query = new URLSearchParams(location.search).get('theme');
+      let saved;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch { /* Storage is optional. */ }
+      const themes = ['light','dark','playful'];
+      document.documentElement.dataset.theme = themes.includes(query) ? query : themes.includes(saved) ? saved : 'light';
+    }
+  </script>
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/src/navigation.css">
+  <link rel="stylesheet" href="/src/playful.css">
+  <link rel="stylesheet" href="/src/playful-glyphs.css">
+  <link rel="stylesheet" href="/src/exhibits.css">
+  <link rel="stylesheet" href="/src/exhibits/ergo.css">
+  <link rel="stylesheet" href="/src/exhibits/casino.css">
+  <link rel="stylesheet" href="/src/exhibits/helplessness.css">
+  <link rel="stylesheet" href="/src/exhibits/improvement.css">
+  <link rel="stylesheet" href="/src/exhibits/derivatology.css">
+  <link rel="stylesheet" href="/src/exhibits/feed-panels.css">
+  <link rel="stylesheet" href="/src/exhibits/wave.css">
+  <link rel="stylesheet" href="/src/exhibits/communication.css">
+  <link rel="stylesheet" href="/src/exhibits/fragmentary.css">
+  <link rel="stylesheet" href="/src/exhibits/worldview.css">
+  <link rel="stylesheet" href="/src/exhibits/character-workbench.css">
+  <link rel="stylesheet" href="/src/exhibits/paradigm-autumn.css">
+  <link rel="stylesheet" href="/src/exhibits/beach-protection.css">
+  <link rel="stylesheet" href="/src/exhibits/butterfly-landscape.css">
+  <title>CV — Анастасия Замараева</title>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skipMain">К содержимому</a>
+  <div class="side-menu" data-open="false">
+    <button id="menu-backdrop" type="button" tabindex="-1" hidden aria-label="Закрыть меню" data-i18n-aria="menuClose"></button>
+    <aside id="side-panel" class="side-panel" inert aria-hidden="true" aria-label="Меню сайта" data-i18n-aria="menuLabel">
+      <button id="menu-close" class="side-panel-top" type="button" aria-label="Закрыть меню" data-i18n-aria="menuClose"><span data-i18n="menuOpen">Меню</span><span class="menu-cross" aria-hidden="true"></span></button>
+      <nav class="side-nav" aria-label="Страницы сайта" data-i18n-aria="pageLinksLabel">
+        <a href="/" data-page-link="home" data-i18n="pageHome">Главная</a>
+        <a href="/bio.html" data-page-link="bio" data-i18n="pageBio">BIO</a>
+        <a href="/portfolio.html" data-page-link="portfolio" data-i18n="pagePortfolio">Портфолио</a>
+        <a href="/statement.html" data-page-link="statement" data-i18n="pageStatement">Artist statement</a>
+        <a href="/manifesto.html" data-page-link="manifesto" data-i18n="pageManifesto">Манифест</a>
+        <a href="/cv.html" data-page-link="cv" data-i18n="pageCv">CV</a>
+        <a href="/contacts.html" data-page-link="contacts" data-i18n="pageContacts">Контакты</a>
+      </nav>
+      <div class="side-preferences"><div class="theme-switch" role="group" aria-label="Тема оформления" data-i18n-aria="themeLabel"><button type="button" data-theme-choice="light" aria-pressed="true" data-i18n="themeLight">Светлая</button><button type="button" data-theme-choice="dark" aria-pressed="false" data-i18n="themeDark">Тёмная</button><button type="button" data-theme-choice="playful" aria-pressed="false" data-i18n="themePlayful">Ещё одна</button></div><div class="language-switch" role="group" aria-label="Язык сайта" data-i18n-aria="languageLabel"><button type="button" data-language="ru" lang="ru" aria-pressed="true">RU</button><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button></div></div>
+    </aside>
+  </div>
+  <header class="site-header" id="top">
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="side-panel" data-i18n="menuOpen">Меню</button>
+    <div class="site-controls"><div class="theme-switch" role="group" aria-label="Тема оформления" data-i18n-aria="themeLabel"><button type="button" data-theme-choice="light" aria-pressed="true" data-i18n="themeLight">Светлая</button><button type="button" data-theme-choice="dark" aria-pressed="false" data-i18n="themeDark">Тёмная</button><button type="button" data-theme-choice="playful" aria-pressed="false" data-i18n="themePlayful">Ещё одна</button></div><div class="language-switch" role="group" aria-label="Язык сайта" data-i18n-aria="languageLabel"><button type="button" data-language="ru" lang="ru" aria-pressed="true">RU</button><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button></div></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-identity"><a class="wordmark" href="/" data-page-link="home" data-i18n="name">Анастасия<br>Замараева</a><p class="artist-line" data-i18n="artistLine">Медиахудожница<br>ArtTECH, МИСИС</p></div>
+      <h1 id="hero-title" data-i18n="heroTitle"><span>А может</span><span class="title-second">и <span class="title-doubt">нет</span></span></h1>
+      <div class="playful-typing" aria-hidden="true"><div class="typing-name"></div><div class="typing-context"><div class="typing-role"></div><div class="typing-school"></div></div><div class="typing-title"></div></div>
+      <figure class="cube-study">
+<canvas data-i18n="cubeFallback" id="cube" width="700" height="700" aria-label="Рисунок куба. Перетаскивайте его или нажмите стрелку, чтобы повернуть." data-i18n-aria="cubeLabel">Рисунок куба: объёмная фигура на плоском экране.</canvas>
+        <figcaption><span id="cube-reading" aria-live="polite" data-i18n="cubeInitial">Куб?</span><button id="change-view" class="view-button" aria-label="Повернуть куб" data-i18n-aria="rotateCube" type="button" data-i18n="changeView"><span aria-hidden="true">↻</span></button></figcaption>
+      </figure>
+      <div class="hero-bottom"><p class="classic-hero-quote" data-i18n="heroQuote">Давайте задавать больше вопросов<br>и искать больше ответов.</p><p class="playful-hero-quote" data-i18n="playfulQuote">У вас будут вопросы,<br>ответы – не знаю</p><a href="#works" class="text-link hero-works-link" data-i18n="viewWorks"><span class="works-cta-label">Смотреть работы</span> <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="portfolio-intro" aria-labelledby="page-portfolio-title">
+      <h1 class="page-heading" id="page-portfolio-title" tabindex="-1" data-i18n="pagePortfolio">Портфолио</h1>
+      <div class="portfolio-pdf"><a class="text-link" href="/downloads/anastasia-zamaraeva-portfolio-ru.pdf" data-document-file="portfolio" target="_blank" rel="noopener" data-i18n="openPortfolioPdf">Открыть портфолио PDF</a><a class="text-link" href="/downloads/anastasia-zamaraeva-portfolio-ru.pdf" data-document-file="portfolio" download="Anastasia_Zamaraeva_Portfolio.pdf" data-i18n="downloadPortfolioPdf">Скачать PDF</a></div>
+    </section>
+    <section class="works section-pad" id="works" aria-labelledby="works-title">
+      <div class="works-heading"><h2 id="works-title" tabindex="-1" data-i18n="works">Работы</h2></div>
+      <div id="project-grid" class="project-grid"></div>
+      <p id="result-count" class="visually-hidden" role="status"></p>
+      <button id="archive-toggle" class="archive-button" type="button" aria-expanded="false" aria-controls="project-grid" data-i18n="more">Ещё работы <span aria-hidden="true">↓</span></button>
+      <noscript><p>Для открытия каталога включите JavaScript. Для связи: <a href="mailto:2003a.z@mail.ru">2003a.z@mail.ru</a>.</p></noscript>
+    </section>
+    <section class="home-quote section-pad about" id="about" aria-labelledby="home-quote-title">
+      <h2 id="home-quote-title" data-i18n="aboutHeading">Мне кажется,</h2>
+      <blockquote class="manifesto-lead" data-i18n="lead">что смысла нет ни в чем;<br>но нет ничего, во что его<br>нельзя было бы вложить.</blockquote>
+    </section>
+    <nav class="home-links section-pad" aria-label="Материалы об авторе" data-i18n-aria="pageLinksLabel">
+      <a href="/bio.html" data-page-link="bio" data-i18n="pageBio">BIO</a>
+      <a href="/portfolio.html" data-page-link="portfolio" data-i18n="pagePortfolio">Портфолио</a>
+      <a href="/statement.html" data-page-link="statement" data-i18n="pageStatement">Artist statement</a>
+      <a href="/manifesto.html" data-page-link="manifesto" data-i18n="pageManifesto">Манифест</a>
+    </nav>
+    <section class="text-page section-pad" id="page-bio" aria-labelledby="page-bio-title">
+      <h1 class="page-heading" id="page-bio-title" tabindex="-1" data-i18n="pageBio">BIO</h1>
+      <div class="reading-copy biography"><h2 data-i18n="authorName">Анастасия Замараева</h2><p data-i18n="bio1">Анастасия Замараева работает в области технологического искусства. Ее интересуют концепции контекста и сознания, которые она рассматривает с точки зрения языка, коммуникации и восприятия в целом.</p><p data-i18n="bio2">Предлагает зрителю интерактивные проекты, где он получает возможность исследовать эти темы через собственные действия. Рассуждает о сути и границах интерактивности. Экспериментирует с разными инструментами: 3D-моделированием, языковыми моделями, электроникой и другими. Окончила бакалавриат КемГУ по направлению «Лингвистика», профиль «Теория и практика межкультурной коммуникации». На данный момент обучается на программе ArtTECH в НИТУ МИСИС. Живет и работает в Москве.</p><p class="education" data-i18n="education">НИТУ МИСИС, ArtTECH — с 2025<br>КемГУ, лингвистика — диплом с отличием, 2025<br>КемГУ, переподготовка «Создание сайтов на HTML и CSS» — 2025</p></div>
+    </section>
+    <section class="text-page section-pad" id="page-statement" aria-labelledby="page-statement-title">
+      <h1 class="page-heading" id="page-statement-title" tabindex="-1" data-i18n="pageStatement">Artist statement</h1>
+      <div class="reading-copy" data-i18n="statementText"><p>Мне кажется, мы часто перестаем задумываться о контексте, постоянно находясь внутри него. Что-то уже кажется само собой разумеющимся, но что оно вообще такое само из себя, чтобы разуметься? Меня интересует, как контекст формирует наш мир и восприятие. Например, может ли человек не быть антропоцентричным? Не в смысле того, должен ли он преодолевать антропоцентризм, а в смысле самой возможности выйти за пределы человеческой перспективы.</p><p>Рассуждать об этом очень помогает язык. Во-первых, потому что рассуждать без языка довольно проблематично, а во-вторых, потому что язык – это, можно сказать, некая длинная и немного запутанная, но раскрывающая многое инструкция к современному человеку.</p><p>Размышляя об особенностях восприятия, я часто создаю интерактивные работы. Мне нравится учитывать, с каким опытом и ожиданиями человек приходит к работе, и играть с ними во время взаимодействия. Ну а в идеале – дарить положительные эмоции.</p><p>Я экспериментирую с технологиями, насколько у меня выходит: 3D, нейросети, электроника и т.д. и т.п. Иногда идея приводит меня к инструменту, иногда инструмент подсказывает, о чем хочется сказать. Мне нравится строить неожиданные связи и разбираться, что именно делает их неожиданными.</p></div>
+    </section>
+    <section class="text-page section-pad" id="page-manifesto" aria-labelledby="page-manifesto-title">
+      <h1 class="page-heading" id="page-manifesto-title" tabindex="-1" data-i18n="pageManifesto">Манифест</h1>
+      <div class="reading-copy" data-i18n="manifestoText">
+          <p>Мне кажется, что смысла нет ни в чем; но нет ничего, во что его нельзя было бы вложить.</p>
+          <p>Я готова отчаянно защищать свои убеждения, но это не значит, что я не готова переубеждаться.</p>
+          <p>Мне кажется, что абсолютной истины не существует; и поэтому, однозначного ответа нет ни на один вопрос. Но это не значит, что не нужно задавать вопросы. Наоборот, следует задавать больше вопросов, чтобы находить больше разных ответов и новых вопросов.</p>
+          <p>Если я посмотрю на рисунок куба на обычном листе бумаги – я могу сказать, что это куб. И это будет правильно. Но это ведь противоречит определению куба, ведь он – трехмерная фигура. Но и рисунок на бумаге не двухмерный, ведь мы в трехмерной реальности. Но несмотря даже на существующую трёхмерность, это всё ещё не куб по геометрическому определению. Но я чётко вижу куб на рисунке, его условное обозначение.</p>
+          <p>Мне кажется, что всё в мире – условность; это позволяет найти больше ответов на один вопрос, чем мы ставим себе задачу найти.</p>
+          <p>Я хочу задавать больше вопросов и искать больше ответов.</p>
+          <p>Я не ставлю, в традиционном смысле, под сомнение науку, я верю науке. Но, я считаю, что можно верить в одно, и искать другое, это не противоречие.</p>
+          <p>Наука на протяжении истории не раз опровергала то, что сама перед этим доказывала. Это нормально.</p>
+          <p>Вопрос – это движущая сила человечества, ответ – передышка в пути.</p>
+          <p>Мы не знаем откуда и куда идем, и я не знаю, найдём ли мы ответы на это. А поэтому, наверное, стоит двигаться.</p>
+          <p>А может и нет,<br>и это еще один вопрос</p>
+        </div>
+    </section>
+    <section class="text-page section-pad" id="page-cv" aria-labelledby="page-cv-title"><h1 class="page-heading" id="page-cv-title" tabindex="-1" data-i18n="pageCv">CV</h1><div id="cv-content" class="reading-copy">
+    <h2>Анастасия Замараева</h2>
+    <p>Автор, креатор<br>Москва, Россия<br><a href="mailto:2003a.z@mail.ru">2003a.z@mail.ru</a></p>
+    <h2>Избранные проекты</h2>
+    <p>Индивидуальные проекты, созданные на программе ArtTECH в НИТУ МИСИС.</p>
+    <h3>Обычная комната (2026)</h3><p>Игровой 3D-прототип, в котором пользователю предлагается адаптироваться к изменённым функциям предметов быта. Возвращение объектов к их классической роли в финале вызывает у игрока когнитивный конфликт. Проживание этого опыта позволяет проследить, как формируются ожидания.</p>
+<h3>Работа о Солнце, раке, людях и смыслах (2026)</h3><p>Интерактивный прототип с солнечной панелью, освещение которой управляет читаемостью текста. Через эту механику раскрывается тема воздействия солнечного излучения на организм человека.</p>
+<h3>Выученная беспомощность (2026)</h3><p>Интерактивный веб-проект об ожиданиях от ИИ и доверии к диалоговому интерфейсу. Языковая модель намеренно уклоняется от ответов на запросы пользователя.</p>
+<h3>Конструктор иероглифов (2026)</h3><p>Интерактивный объект для сборки китайских иероглифов из отдельных элементов. Работа исследует, как возможность действовать внутри незнакомой знаковой системы меняет её восприятие.</p>
+<h3>Фрагментарное восприятие (2025)</h3><p>Музыкальная композиция на основе игры слов, в которой интерпретация услышанного зависит от контекста и предшествующего опыта слушателя.</p>
+    <h2>Образование</h2>
+    <p>2025 – настоящее время. НИТУ МИСИС. Магистратура, программа ArtTECH.</p>
+<p>2025. КемГУ. Бакалавриат с отличием. Лингвистика, профиль «Теория и практика межкультурной коммуникации».</p>
+<p>2025. КемГУ. Профессиональная переподготовка, программа «Создание сайтов на HTML и CSS», квалификация «Разработчик web и мультимедийных приложений».</p>
+    <h2>Инструменты и навыки</h2>
+    <p>3D-моделирование в Blender и Rhino, доработка моделей и подготовка файлов для производства.</p>
+<p>Лазерная резка, пайка электронных компонентов.</p>
+<p>Базовое владение TouchDesigner.</p>
+    <h2>Языки</h2>
+    <p>Русский – родной</p>
+<p>Английский – свободный</p>
+  </div></section>
+    <section id="document-footer" class="document-footer section-pad" aria-label="Документы" data-i18n-aria="documentsLabel">
+      <a id="document-download" class="text-link" href="/downloads/anastasia-zamaraeva-bio-ru.pdf" download>Скачать BIO (PDF, RU)</a>
+      <nav class="document-links" aria-label="Другие документы" data-i18n-aria="otherDocuments">
+        <a href="/bio.html" data-page-link="bio" data-i18n="pageBio">BIO</a>
+        <a href="/statement.html" data-page-link="statement" data-i18n="pageStatement">Artist statement</a>
+        <a href="/cv.html" data-page-link="cv" data-i18n="pageCv">CV</a>
+        <a href="/portfolio.html" data-page-link="portfolio" data-i18n="pagePortfolio">Портфолио</a>
+        <a href="/manifesto.html" data-page-link="manifesto" data-i18n="pageManifesto">Манифест</a>
+      </nav>
+    </section>
+    <section class="text-page section-pad" id="page-contacts" aria-labelledby="page-contacts-title"><h1 class="page-heading" id="page-contacts-title" tabindex="-1" data-i18n="pageContacts">Контакты</h1></section>
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><h2 id="contact-title" data-i18n="contactHeading">Есть<br><span>вопрос?</span></h2><div class="contact-actions"><a class="email-link" href="mailto:2003a.z@mail.ru">2003a.z@mail.ru <span aria-hidden="true">↗</span></a><a class="telegram-link text-link" href="https://t.me/ukolzla" target="_blank" rel="noopener">Telegram @ukolzla <span aria-hidden="true">↗</span></a><button id="copy-email" class="text-link" type="button" data-i18n="copyEmail">Скопировать адрес</button><p id="copy-status" role="status"></p></div></section>
+  </main>
+  <footer class="site-footer"><span data-i18n="footerName">Анастасия Замараева</span><a href="#top" data-i18n="backTop">Вернуться к началу ↑</a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><span data-i18n="dialogWorks">Работы</span><div class="dialog-controls"><div class="theme-switch" role="group" aria-label="Тема оформления" data-i18n-aria="themeLabel"><button type="button" data-theme-choice="light" aria-pressed="true" data-i18n="themeLight">Светлая</button><button type="button" data-theme-choice="dark" aria-pressed="false" data-i18n="themeDark">Тёмная</button><button type="button" data-theme-choice="playful" aria-pressed="false" data-i18n="themePlayful">Ещё одна</button></div><div class="language-switch" role="group" aria-label="Язык сайта" data-i18n-aria="languageLabel"><button type="button" data-language="ru" lang="ru" aria-pressed="true">RU</button><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button></div></div><button id="close-dialog" type="button" data-i18n="close">Закрыть <span aria-hidden="true">×</span></button></div><div id="dialog-content"></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

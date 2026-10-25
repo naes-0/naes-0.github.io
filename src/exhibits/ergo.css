@@ -1,0 +1,117 @@
+/* A native playable viewport. All artwork PNGs are original, unmodified layers. */
+.ad-ergo .ad-scene{display:block;width:100%;min-width:0;min-height:620px;height:auto;aspect-ratio:16/9;padding:0;border:0;border-radius:0;box-shadow:none;background:#79c5d0}
+.ergo-water{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.ad-ergo .ergo-appeal{position:absolute;z-index:3;top:4%;left:50%;translate:-50% 0;margin:0;width:94%;max-width:1100px;font-size:clamp(34px,5.4vw,78px);font-weight:900;line-height:1.06;letter-spacing:-.025em;text-transform:uppercase;rotate:-3deg;color:#fffdf3;text-align:center;pointer-events:none;-webkit-text-stroke:1.5px #244f57;paint-order:stroke fill;text-shadow:0 5px #244f57,0 8px 0 #244f5755}
+.ergo-appeal span{display:block}
+.ergo-appeal span:last-child{color:#fff2a1}
+.ergo-engaged .ergo-appeal{visibility:hidden}
+.ergo-play{position:absolute;left:50%;top:49%;translate:-50% -50%;width:36%;max-width:380px;aspect-ratio:1;display:block;padding:0;border:0;background:none;color:#173e46;cursor:pointer;touch-action:manipulation}
+.ergo-play:focus-visible{outline:3px dashed #244f57;outline-offset:10px;border-radius:50%}
+.ergo-play:disabled{cursor:default}
+.ergo-creature,.ergo-body-stack{display:block;position:absolute;inset:0;width:100%;height:100%}
+.ergo-body-stack{isolation:isolate;transform-origin:center;filter:drop-shadow(0 18px 9px #23565e29)}
+.ergo-body-stack .ergo-base{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1}
+.ergo-mutations{display:contents}
+.ergo-body-stack .ergo-layer{position:absolute;left:-11.2%;top:-13%;width:126.5%;height:126.5%;max-width:none;object-fit:contain;pointer-events:none}
+.ergo-tap{position:absolute;left:65%;top:69%;width:86px;height:115px;pointer-events:none;z-index:2001}
+.ergo-hand{position:absolute;top:5px;left:6px;width:75px;height:95px;rotate:-24deg;filter:drop-shadow(2px 5px 2px #173e4633);transform-origin:32% 9%}
+.ergo-tap-ring{position:absolute;left:25px;top:7px;width:46px;height:46px;border:3px solid #fffdf3;border-radius:50%;translate:-50% -50%;box-shadow:0 0 0 1px #24414a44;opacity:.85}
+.ergo-tap .ring-second{width:72px;height:72px;opacity:.45}
+.ergo-engaged .ergo-tap{display:none}
+.ergo-progress{position:absolute;z-index:3;top:86%;left:50%;translate:-50% 0;width:88%;max-width:600px;display:flex;flex-direction:column;align-items:center;gap:12px;color:#173e46;pointer-events:none}
+.ad-ergo .ergo-count{font-weight:500;font-size:clamp(17px,1.9vw,24px);line-height:1.2;text-align:center;text-shadow:0 1px #e5ffffaa}
+.ergo-meter{width:min(100%,380px);height:15px;padding:3px;border-radius:20px;background:#ecfff6b3;box-shadow:0 2px 0 #3f818c55;overflow:hidden}
+.ergo-meter>span{display:block;width:0;height:100%;border-radius:20px;background:linear-gradient(90deg,#4eaf9b,#257f95);transition:width .16s ease-out}
+.ad-ergo .ergo-reward{min-height:1.4em;font-size:15px;line-height:1.25;text-align:center;max-width:100%}
+.ergo-reward:empty{visibility:hidden}
+.ergo-install,.ergo-retry{pointer-events:auto;font-size:17px;font-weight:500;line-height:1.2;padding:12px 20px;border-radius:24px;background:#fff2a1;border:2px solid #244f57;box-shadow:0 3px 0 #244f57}
+.ergo-complete .ergo-reward{display:none}
+.ergo-complete .ergo-progress{gap:6px}
+.ergo-complete .ergo-count{font-size:18px}
+.ergo-complete .ergo-install{margin-top:-5px}
+.ergo-light-rays{transform-origin:50% 0}
+.ergo-plant{transform-box:fill-box;transform-origin:50% 100%}
+/* extinction_screen.tscn: original veil, pale card, teal primary button. */
+.ergo-ending{position:absolute;inset:0;z-index:5;display:grid;place-items:center;padding:22px;background:#0c323d8f}
+.ergo-ending[hidden]{display:none}
+.ergo-ending-card{width:min(100%,620px);padding:34px 42px;display:flex;flex-direction:column;align-items:stretch;gap:24px;border:1px solid #64acb96b;border-radius:30px;background:#f0fbfcfa;box-shadow:0 12px 24px #06222a3d;color:#0c3440;text-align:center}
+.ad-ergo .ergo-ending h3{margin:0;font-size:clamp(29px,4vw,42px);font-weight:500;line-height:1.15;letter-spacing:0}
+.ergo-why{display:block;padding:16px 22px;border-radius:15px;background:#1b6476;color:#f0fdff;font-size:18px;font-weight:500;line-height:1.2;text-decoration:none}
+.ergo-why:hover{background:#258296}
+.ergo-why:focus-visible,.ergo-ending .ergo-install:focus-visible{outline:3px solid #1b6476;outline-offset:5px}
+.ad-ergo .ergo-downloading{margin:0;color:#175768;font-size:14px;font-weight:400;line-height:1.4}
+.ergo-complete .ergo-appeal,.ergo-complete .ergo-progress{visibility:hidden}
+.ergo-complete .ergo-creature{animation-play-state:paused!important}
+@media(prefers-reduced-motion:no-preference){
+  .ergo-creature{animation:ergo-float 3.4s ease-in-out infinite}
+  .ergo-hand{animation:ergo-tap 1.8s ease-in-out infinite}
+  .ergo-tap-ring{animation:ergo-ripple 1.8s ease-out infinite}
+  .ergo-tap .ring-second{animation-delay:.25s}
+  .ergo-appeal{animation:ergo-headline 1.9s ease-in-out infinite}
+  .ergo-light-rays{animation:ergo-rays 9s ease-in-out infinite alternate}
+  .ergo-bubble{animation:ergo-bubble var(--duration) linear var(--delay) infinite}
+  .ergo-plant{animation:ergo-plant 3s ease-in-out var(--delay) infinite alternate}
+  .ad-ergo .ad-scene *{animation-play-state:paused}
+  .ad-ergo.ad-in-view .ad-scene *{animation-play-state:running}
+  .ergo-engaged .ergo-appeal{animation:none}
+  .ergo-meter-earned>span{animation:ergo-earned .65s ease-out both}
+  .ergo-complete .ergo-meter-earned>span{animation:none;width:100%}
+  @keyframes ergo-headline{0%,100%{scale:1}50%{scale:1.06;transform:translateY(-4px)}}
+  @keyframes ergo-float{50%{transform:translateY(-7px) rotate(1deg)}}
+  @keyframes ergo-tap{0%,55%,100%{transform:translate(12px,16px) scale(1)}22%,35%{transform:translate(0,0) scale(.9)}}
+  @keyframes ergo-ripple{0%,12%{transform:scale(.4);opacity:0}23%{opacity:.9}65%,100%{transform:scale(1.8);opacity:0}}
+  @keyframes ergo-rays{to{transform:translateX(20px) skewX(2deg);opacity:.18}}
+  @keyframes ergo-bubble{0%{transform:translate(0,50px);opacity:0}15%,75%{opacity:1}100%{transform:translate(12px,-150px);opacity:0}}
+  @keyframes ergo-plant{from{transform:skewX(-10deg) rotate(-2deg)}to{transform:skewX(12deg) rotate(2deg)}}
+  @keyframes ergo-earned{0%,45%{width:100%;filter:brightness(1.3)}100%{width:0;filter:brightness(1)}}
+}
+@media(max-width:750px){
+  .ad-ergo .ad-scene{aspect-ratio:4/5;min-height:560px}
+  .ad-ergo .ergo-appeal{top:7%;font-size:clamp(20px,6.1vw,44px);width:92%;-webkit-text-stroke:1px #244f57}
+  .ergo-play{width:79%;top:48%;max-width:365px}
+  .ergo-tap{scale:.8;transform-origin:top left;left:64%;top:66%}
+  .ergo-progress{top:75%;gap:11px;width:92%}
+  .ad-ergo .ergo-count{font-size:17px}
+  .ad-ergo .ergo-reward{font-size:13px;min-height:2.5em;max-width:90%}
+  .ergo-meter{width:88%;height:14px}
+  .ergo-install,.ergo-retry{font-size:15px;padding:10px 16px}
+  .ergo-ending{padding:16px}
+  .ergo-ending-card{padding:30px 20px;gap:22px}
+  .ergo-why{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){.ad-ergo .ad-scene *{animation:none!important;transition:none!important}}
+/* Width follows the window; composition follows its available height. */
+.ad-ergo .ad-scene{height:var(--scene-height);min-height:0;aspect-ratio:auto}
+.ad-ergo .ergo-appeal{font-size:min(5.4vw,6svh,68px)}
+.ergo-play{width:min(32vw,38svh,340px)}
+@media(max-width:750px){
+  .ad-ergo .ergo-appeal{font-size:clamp(20px,6.1vw,44px)}
+  .ergo-play{width:min(74vw,40svh,340px)}
+  .ergo-progress{top:78%;gap:7px}
+}
+
+@media(max-height:600px){
+  .ergo-play{top:49%;width:min(28vw,34svh,260px)}
+  .ergo-progress{top:80%;gap:4px}
+  .ad-ergo .ergo-count{font-size:16px}
+  .ergo-meter{height:12px}
+  .ad-ergo .ergo-reward{font-size:12px;min-height:0}
+}
+
+/* Navigation belongs to the water scene, without a separate yellow strip. */
+.ad-ergo .ad-foot{position:absolute;left:50%;bottom:18px;translate:-50% 0;z-index:4;padding-top:0;margin:0;color:#173e46}
+.ad-ergo .ergo-progress{top:76%}
+@media(max-width:750px){.ad-ergo .ergo-progress{top:76%}}
+@media(max-height:600px){.ad-ergo .ergo-progress{top:78%}}
+
+/* Compact feedback controls inspired by mobile ad SDK footers. */
+.ad-ergo .ergo-feedback{width:min(460px,calc(100% - 40px));bottom:20px;display:flex;gap:12px;font-family:RobotoChat,Arial,sans-serif}
+.ergo-feedback button{flex:1;min-width:0;max-width:none!important;min-height:48px;padding:13px 16px;border:1px solid #c6d0d6;border-radius:28px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;line-height:1.2;text-align:center;background:#ffffffed;color:#384a55;box-shadow:0 2px 7px #173e4614}
+.ergo-feedback .feedback-yes{background:#1877ed;border-color:#1877ed;color:#fff}
+.ergo-feedback button:hover{filter:brightness(.95)}
+.ergo-feedback button:focus-visible{outline:3px solid #173e46;outline-offset:4px}
+@media(max-height:600px){.ad-ergo .ergo-progress{top:74%}.ad-ergo .ergo-feedback{bottom:12px}.ergo-feedback button{min-height:44px;padding-block:11px}}
+
+.ad-ergo .ergo-close{top:16px;right:16px;width:40px;height:40px;z-index:4;display:grid;place-items:center;border-radius:50%;background:#f5fffcbb;color:#244f57;opacity:1;font-size:28px;line-height:1}
+
+.ergo-feedback p{margin:auto;padding:12px 20px;border-radius:24px;background:#ffffffed;color:#384a55}

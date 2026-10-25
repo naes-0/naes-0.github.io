@@ -1,0 +1,175 @@
+/* Shared navigation keeps the existing typography and theme colours. */
+@layer components {
+  .side-menu [hidden], #menu-backdrop[hidden] { display:none!important }
+
+  .site-header {position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);padding:20px var(--gutter);align-items:center}
+  #menu-toggle {position:static;writing-mode:horizontal-tb;transform:none;padding:10px 0;border:0;background:none;color:var(--ink);font-size:18px;line-height:1.2;text-align:left;justify-self:start}
+  .hero-identity{grid-column:1;grid-row:1}
+  .hero-identity .wordmark{display:inline-block;margin-bottom:24px}
+  .hero-identity .artist-line{margin-bottom:30px}
+  #menu-toggle:hover { background:var(--surface) }
+  #menu-toggle:focus-visible { outline-offset:3px }
+  #menu-backdrop {
+    position:fixed;inset:0;z-index:59;background:#12121266;
+    width:100%;height:100%;padding:0;cursor:default;
+  }
+  #side-panel {
+    --panel-x:30px;--panel-top:30px;position:fixed;inset:0 auto 0 0;z-index:60;
+    width:min(360px,calc(100vw - 36px));height:100dvh;
+    display:flex;flex-direction:column;gap:38px;
+    padding:30px 30px 36px;overflow-y:auto;overscroll-behavior:contain;
+    border-right:1px solid var(--line);background:var(--paper);color:var(--ink);
+    transform:translateX(-100%);visibility:hidden;
+    transition:transform 200ms ease,visibility 200ms;
+  }
+  .side-menu[data-open=true] #side-panel { transform:translateX(0);visibility:visible }
+  .side-panel-top { display:flex;align-items:center;justify-content:space-between }
+  #menu-close {width:calc(100% + var(--panel-x)*2);flex-shrink:0;margin:calc(-1*var(--panel-top)) calc(-1*var(--panel-x)) 0;padding:var(--panel-top) var(--panel-x);font-size:18px;color:var(--ink);text-align:left;min-height:80px}
+  #menu-close:focus-visible{outline-offset:-6px}
+  .menu-cross{position:relative;display:block;width:24px;height:24px}
+  .menu-cross::before,.menu-cross::after{content:'';position:absolute;left:0;top:11px;width:24px;height:1.5px;background:currentColor}
+  .menu-cross::before{transform:rotate(45deg)}
+  .menu-cross::after{transform:rotate(-45deg)}
+  #menu-close:hover { color:var(--ink) }
+  .side-nav { display:flex;flex-direction:column;align-items:flex-start;gap:16px }
+  .side-nav a {
+    max-width:100%;padding:4px 0;font-size:clamp(23px,2.6vw,30px);
+    font-weight:500;line-height:1.18;letter-spacing:-.045em;overflow-wrap:anywhere;
+  }
+  .side-nav a:hover, .side-nav a[aria-current=page] {
+    text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px;
+  }
+  .side-preferences {
+    display:flex;flex-direction:column;align-items:flex-start;gap:22px;
+    margin-top:auto;padding-top:24px;border-top:1px solid var(--line);
+  }
+  .side-preferences .theme-switch { flex-wrap:wrap;gap:12px 16px }
+  .side-preferences .language-switch { gap:18px }
+
+  :root[data-page]:not([data-page=home]) .hero,
+  :root[data-page]:not([data-page=home]) .home-links,
+  :root[data-page]:not([data-page=home]) .home-quote,
+  :root[data-page]:not([data-page=home]):not([data-page=portfolio]) #works {
+    display:none!important;
+  }
+  .text-page { display:none;padding:80px var(--gutter) 100px;min-height:65vh }
+  :root[data-page=bio] #page-bio,
+  :root[data-page=statement] #page-statement,
+  :root[data-page=manifesto] #page-manifesto,
+  :root[data-page=contacts] #page-contacts { display:block }
+  #portfolio-intro { display:none;padding:72px var(--gutter) 0 }
+  :root[data-page=portfolio] #portfolio-intro { display:block }
+  .page-heading {
+    margin:0 0 46px;font-size:clamp(44px,7vw,96px);font-weight:500;
+    line-height:1.05;letter-spacing:-.06em;overflow-wrap:anywhere;
+  }
+  .reading-copy { max-width:800px;font-size:20px;line-height:1.7 }
+  .reading-copy p + p { margin-top:24px }
+  .reading-copy h2, .reading-copy h3 {
+    margin:42px 0 20px;font-size:28px;font-weight:500;line-height:1.2;letter-spacing:-.035em;
+  }
+  .reading-copy .education { margin-top:38px;color:var(--muted);font-size:16px }
+  .reading-copy a { text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere }
+  .portfolio-pdf { display:flex;align-items:center;flex-wrap:wrap;gap:22px 38px }
+  .home-links {
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 8%;
+    padding:90px var(--gutter);
+  }
+  .home-links a {
+    justify-self:start;max-width:100%;padding-bottom:8px;border-bottom:1px solid var(--line);
+    font-size:clamp(27px,4.4vw,68px);font-weight:500;line-height:1.12;
+    letter-spacing:-.055em;overflow-wrap:anywhere;
+  }
+  .home-links a:hover { color:var(--muted);border-color:currentColor }
+  .home-quote { padding:110px var(--gutter) 85px;background:var(--surface);color:var(--ink) }
+  .home-quote h2 { font-size:clamp(65px,10.3vw,170px);font-weight:900;letter-spacing:-.035em }
+  .home-quote .manifesto-lead { margin-bottom:48px }
+  .home-quote .manifesto-excerpt { max-width:670px;margin:0 0 0 auto }
+  :lang(en) .home-quote h2 { font-size:clamp(58px,8.1vw,140px) }
+}
+
+@layer responsive {
+  @media(max-width:900px) {
+    .site-header {
+      display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px;
+    }
+    .site-header .wordmark { min-width:0 }
+    .site-header .site-controls {
+      grid-column:2;grid-row:1;margin:0;flex-direction:column;align-items:flex-end;gap:12px;
+    }
+    .site-header .language-switch { order:-1 }
+    .site-header .theme-switch { font-size:13px;gap:10px }
+  }
+  @media(max-width:720px) {
+    .text-page { padding:52px var(--gutter) 72px }
+    .page-heading { margin-bottom:32px }
+    .reading-copy { font-size:18px;line-height:1.65 }
+    .reading-copy .education { font-size:14px }
+    #portfolio-intro { padding-top:42px }
+    .portfolio-pdf { gap:18px 28px }
+    .home-links { padding:64px var(--gutter);gap:32px 24px }
+    .home-links a { font-size:clamp(24px,5.8vw,39px) }
+    .home-quote { padding:72px var(--gutter) }
+    .home-quote h2 { font-size:clamp(36px,11.5vw,84px) }
+    :lang(en) .home-quote h2 { font-size:9.4vw }
+  }
+  @media(max-width:370px) {
+    #side-panel { --panel-x:24px;--panel-top:22px;padding:22px 24px 30px;gap:28px }
+    .side-nav { gap:14px }
+    .site-header { gap:12px }
+    .site-header .theme-switch { font-size:12px;gap:8px }
+    .home-links { column-gap:18px }
+    .home-links a { font-size:24px }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    #side-panel { transition:none }
+  }
+}
+
+/* Stable anchors below the persistent header. */
+html{scroll-padding-top:calc(var(--header-height,90px) + 16px)}
+html .portfolio-ad{scroll-margin-top:calc(var(--header-height,90px) + 16px)}
+:root:not([data-page=home]):not([data-page=contacts]) .contact{display:none}
+#page-contacts{min-height:0;padding-bottom:24px}
+[data-page=contacts] .contact{display:block;padding-top:0;min-height:45vh}
+[data-page=contacts] .contact h2{display:none}
+[data-page=contacts] .contact-actions{max-width:760px}
+.project-card .project-visual{background:var(--surface)}
+.media-retry{display:block;padding:12px;font-size:14px;text-align:left;color:var(--muted)}
+.project-resources{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:26px}
+.project-resources .text-link{font-size:16px;overflow-wrap:anywhere}
+@media(max-width:720px){.hero-identity{grid-row:1} .hero-identity .wordmark{font-size:22px;margin-bottom:22px}.site-header{padding-block:14px}}
+
+.project-visual .media-retry{position:absolute;inset:0;display:grid;place-items:center;background:var(--surface)}
+
+/* Native scrollbars: theme colours, no replacement wheel or scroll handlers. */
+html,dialog,#side-panel{scrollbar-width:thin;scrollbar-color:var(--muted) var(--paper)}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:var(--paper)}
+::-webkit-scrollbar-thumb{background:var(--muted);border:3px solid var(--paper);border-radius:12px}
+::-webkit-scrollbar-thumb:hover{background:var(--ink)}
+@media(forced-colors:active){html,dialog,#side-panel{scrollbar-width:auto;scrollbar-color:auto}}
+
+@supports selector(::-webkit-scrollbar){html,dialog,#side-panel{scrollbar-width:auto;scrollbar-color:auto}}
+@media(forced-colors:active){::-webkit-scrollbar-track{background:Canvas}::-webkit-scrollbar-thumb{background:CanvasText;border-color:Canvas}}
+/* Document footers share the existing type and theme tokens. */
+@layer components {
+  :root[data-page=cv] #page-cv{display:block}
+  .document-footer{display:none;padding-top:0;padding-bottom:72px}
+  :root:is([data-page=bio],[data-page=statement],[data-page=cv],[data-page=portfolio],[data-page=manifesto]) .document-footer{display:block}
+  .document-links{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:34px;font-size:15px;color:var(--muted)}
+  .document-links a{opacity:.72;transition:opacity .15s}
+  .document-links a:hover,.document-links a:focus-visible{opacity:1;color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+  .document-links [hidden]{display:none!important}
+  #page-cv li{margin:12px 0;line-height:1.65}
+  #page-cv ul{padding-left:22px}
+  .contact-actions .telegram-link{font-size:18px;justify-self:start}
+}
+
+/* Theme choices keep their own swatches in every theme and navigation surface. */
+html .theme-switch button[data-theme-choice][aria-pressed]{padding:6px 9px;border:1px solid transparent;border-radius:0;transform:none;line-height:1.2;min-height:30px}
+html .theme-switch button[data-theme-choice=light][aria-pressed]{background:#fff;color:#20222b}
+html .theme-switch button[data-theme-choice=dark][aria-pressed]{background:#111;color:#fff}
+html .theme-switch button[data-theme-choice=playful][aria-pressed]{background:#f092c5;color:#d4efff}
+html .theme-switch button[data-theme-choice][aria-pressed=true]{outline:1px solid currentColor;outline-offset:3px}
+html .theme-switch button[data-theme-choice]:focus-visible{outline:2px solid #2682b8;outline-offset:4px}

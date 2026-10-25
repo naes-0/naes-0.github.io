@@ -1,0 +1,38 @@
+/* Approved layered composition; original letter geometry and media stay separate. */
+[data-gallery=ads] .ad-derivatology{width:100%;scroll-margin-top:-32px}
+.ad-derivatology .ad-scene{height:100svh;min-height:0;padding:0;border:0;border-radius:0;box-shadow:none;gap:0;background-color:#690467;background-image:linear-gradient(150deg,transparent 58%,#be0c9c44 58%,#be0c9c44 72%,transparent 72%),linear-gradient(27deg,transparent 30%,#3b004766 30%,#3b004766 46%,transparent 46%),repeating-conic-gradient(from 22deg at 43% 61%,#830777 0deg 43deg,#62045e 43deg 102deg,#970b8133 102deg 160deg,#4f0756 160deg 203deg,#7e076c 203deg 287deg,#a20b8533 287deg 360deg);background-size:60% 75%,73% 91%,100% 100%;color:#fff;font-family:Arial,sans-serif}
+.deriv-promo{position:relative;container-type:inline-size;width:min(100%,150svh);aspect-ratio:1536/1024;flex:none;isolation:isolate}
+.deriv-visual{position:absolute;left:0;top:0;width:56.640625%;height:100%}
+.deriv-layer{position:absolute;pointer-events:none}
+.deriv-layer svg{display:block;width:100%;height:100%}
+.deriv-heading{left:0;top:0;width:100%;height:35.15625%;z-index:4}
+.deriv-woman{left:16.66666667%;top:29.78515625%;width:68.96551724%;height:58.59375%;z-index:1}
+.deriv-woman video,.deriv-woman img{display:block;width:100%;height:100%;object-fit:contain}
+.deriv-clouds{left:0;top:32.2265625%;width:100%;height:38.0859375%;z-index:2}
+.deriv-clouds .cloud{pointer-events:auto}
+.deriv-ribbon{left:0;top:79.1015625%;width:100%;height:21.484375%;z-index:3}
+.ad-derivatology .deriv-screenreader{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0;padding:0;border:0}
+.deriv-panel{position:absolute;left:56.640625%;top:4.8828125%;width:42.7734375%;height:90.234375%;min-width:0;overflow:hidden;border-radius:7.6% / 5.3%;z-index:5}
+.deriv-panel-art{display:block;width:100%;height:100%;pointer-events:none}
+.deriv-form{position:absolute;inset:0;display:block;width:100%;margin:0;padding:0;border:0;background:none}
+.ad-derivatology textarea{position:absolute;box-sizing:border-box;left:6.9%;top:31.8%;width:86.7%;height:24.4%;min-width:0;min-height:0;resize:none;padding:1.4cqw 1.2cqw;border:0;border-radius:.65cqw;background:#fdfdfd;color:#252027;font:400 2.05cqw/1.25 Arial,sans-serif;box-shadow:none;outline-offset:4px}
+.ad-derivatology textarea::placeholder{color:#888;opacity:1}
+.ad-derivatology textarea:focus-visible{outline:3px solid #ffed00}
+.deriv-form .deriv-cta{position:absolute;left:4.1%;top:76.8%;width:92.4%;height:18.5%;min-height:0;margin:0;padding:0;border:0;border-radius:5cqw;box-shadow:none;background:url(/assets/derivatology-panel-ru.webp) 53.947% 94.233% / 108.225% 540.541%;transform-origin:center;animation:deriv-result-pulse 1.45s ease-in-out infinite;transition:filter .12s,transform .12s,box-shadow .12s;cursor:pointer}
+.deriv-form .deriv-cta:hover,.deriv-form .deriv-cta:focus-visible{animation:none;filter:brightness(1.18) saturate(1.15);transform:scale(1.018);box-shadow:0 0 20px #59ff0088}
+.deriv-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.deriv-form .deriv-cta:active{animation:none;transform:scale(.985)}
+.deriv-promo.paused *{animation-play-state:paused!important}
+@keyframes deriv-result-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.ad-derivatology .ad-close{z-index:6;top:4px;right:5px;width:44px;height:44px;background:#2c0038cc;color:#fff;border-radius:50%;opacity:1;font:38px/1 Arial,sans-serif;transform:none}
+@media(max-width:760px){
+ .ad-derivatology .ad-scene{height:auto;min-height:100svh;justify-content:start}
+ .deriv-promo{width:min(100%,520px);aspect-ratio:auto;display:flex;flex-direction:column}
+ .deriv-visual{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:870/1024}
+ .deriv-panel{position:relative;inset:auto;width:calc(100% - 24px);height:auto;aspect-ratio:657/924;margin:0 12px 22px}
+ .ad-derivatology textarea{font-size:clamp(16px,4.7cqw,24px);padding:3cqw 2cqw;border-radius:2.5cqw}
+ .deriv-form .deriv-cta{border-radius:9cqw}
+}
+@media(prefers-reduced-motion:reduce){.deriv-form .deriv-cta{animation:none;transition:none}.deriv-form .deriv-cta{transform:none!important}}
+.deriv-panel[data-locale=en] textarea{left:7%;top:30.6%;width:85%;height:24%}
+.deriv-panel[data-locale=en] .deriv-cta{left:3.5%;top:75.5%;width:93%;height:20%;background-image:url(/assets/derivatology-panel-en.webp);background-position:50% 94.375%;background-size:107.527% 500%}
