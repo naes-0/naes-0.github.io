@@ -68,7 +68,7 @@ export const projectTranslations = {
     "type": "Web art / AR intervention",
     "tools": "Blender, web, AR",
     "status": "Web prototype",
-    "alt": "The artist’s 3D model of an urban litter bin with wooden slats",
+    "alt": "A litter bin with wooden slats in Urban Improvement",
     "intro": "A virtual urban object as an answer to every problem in the environment. The more solutions there are, the more visible the absurdity becomes.",
     "body": [
       "The visitor places a virtual litter bin in a real space. What initially seems a rational gesture gradually becomes an exploration of the habit of addressing human behaviour with new infrastructure.",
